@@ -18,9 +18,11 @@ Sie können eine Dynamischen Infrastruktur-Plattform (Private Cloud) einrichten,
 * 03 - [Vagrant](#-03---vagrant)
 * 04 - [Packer (optional)](#-04---packer)
 * 05 - [AWS Cloud (optional)](#-05---aws-cloud)
-* 06 - [Fazit / Reflexion](#-06---reflexion--fragen)
-* 07 - [Quellenverzeichnis](#-07---quellenverzeichnis)
+* 06 - [Reflexion](#-06---reflexion)
+* 07 - [Fragen](Fragen.md)
+* 08 - [Quellenverzeichnis](#-08---quellenverzeichnis)
 * 09 - [Beispiele](#-09---beispiele)
+
 ___
 
 ![](../images/Cloud_Computing_36x36.png "Cloud Computing") 01 - Cloud Computing
@@ -667,13 +669,28 @@ Nachdem die Dateien config.rb und Vagrantfile erstellt wurden kann im erstellten
     $ vagrant up web --provider=aws
 ```
 
-![](../images/Reflexion_36x36.png "Fazit / Reflexion") 06 - Reflexion / Fragen
+![](../images/Reflexion_36x36.png) 06 - Reflexion
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
+Unter **[Cloud Computing](https://de.wikipedia.org/wiki/Cloud_Computing)** (deutsch Rechnerwolke) versteht man die Ausführung von Programmen, die nicht auf dem lokalen Rechner installiert sind, sondern auf einem anderen Rechner, der aus der Ferne aufgerufen wird (bspw. über das Internet).
 
-![](../images/Magnifier_36x36.png "Quellenverzeichnis") 07 - Quellenverzeichnis
+Eine **dynamische Infrastruktur-Plattform** ist ein System, das Rechen-Ressourcen bereitstellt (Virtualisiert),
+insbesondere Server (compute), Speicher (storage) und Netzwerke (networks), und diese
+Programmgesteuert zuweist und verwaltet, sogenannte **Virtuelle Maschinen** (VM).
+
+Damit "Infrastructure as Code" auf "Dynamic Infrastructure Platforms" genutzt werden können, müssen sie die folgenden Anforderungen erfüllen:
+
+- **Programmierbar** - Ein Userinterface ist zwar angenehm und viele Cloud Anbieter haben eines, aber für "Infrastructure as Code"
+muss die Plattform via Programmierschnittstelle ([API](https://de.wikipedia.org/wiki/Programmierschnittstelle)) ansprechbar sein.
+- **On-demand** - Ressourcen (Server, Speicher, Netzwerke) schnell erstellen und vernichtet.
+- **Self-Service** - Ressourcen anpassen und auf eigene Bedürfnisse zuschneiden.
+- **Portabel** - Anbieter von Ressourcen müssen austauschbar sein.
+- Sicherheit, Zertifizierungen (z.B. [ISO 27001](https://de.wikipedia.org/wiki/ISO/IEC_27001)), ...
+
+
+![](../images/Magnifier_36x36.png "Quellenverzeichnis") 08 - Quellenverzeichnis
 ====== 
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)

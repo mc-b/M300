@@ -17,8 +17,9 @@ Sie können die Sicherheit in einer virtualisierte Infrastruktur Verbessern.
 * 02 - [Benutzer- & Rechteverwaltung (optional)](02---benutzer---rechteverwaltung)
 * 03 - [SSH](03---ssh)
 * 04 - [Authentifizierung & Autorisierung (optional)](04---authentifizierung--autorisierung)
-* 05 - [Fazit / Reflexion](#-05---reflexion--fragen)
-* 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
+* 05 - [Reflexion](#-05---reflexion)
+* 06 - [Fragen](Fragen.md)
+* 08 - [Quellenverzeichnis](#-08---quellenverzeichnis)
 * 09 - [Beispiele](#-09---beispiele)
 ___
 
@@ -553,14 +554,25 @@ Eine Identity-Management-Architektur sollte über ein Provisionierungsmodul verf
 Identity-Management in einem Unternehmen hat vielfach Schnittstellen zum sogenannten Access-Management, das beispielsweise für Portale die Zugriffsrechte verwaltet, Single Sign-on (SSO) ermöglicht oder Security Policies verwaltet. Für die Kombination von Identity-Management und Access Management wurde in der IT daher mittlerweile der Begriff "Identity and Access Management" (IAM oder IdAM) geprägt.
 
 
-![](../images/Reflexion_36x36.png "Fazit / Reflexion") 05 - Reflexion / Fragen
+![](../images/Reflexion_36x36.png "Reflexion") 05 - Reflexion
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
+Eine [Firewall](http://de.wikipedia.org/wiki/Firewall) (von englisch firewall ‚Brandwand‘ oder ‚Brandmauer‘) ist ein Sicherungssystem, das ein Rechnernetz oder einen einzelnen Computer vor unerwünschten Netzwerkzugriffen schützt und ist weiter gefasst auch ein Teilaspekt eines Sicherheitskonzepts.
 
+Der [Reverse Proxy](http://de.wikipedia.org/wiki/Reverse_Proxy) ist ein Proxy, der Ressourcen für einen Client von einem oder mehreren Servern holt. Die Adressumsetzung wird in der entgegengesetzten Richtung vorgenommen, wodurch die wahre Adresse des Zielsystems dem Client verborgen bleibt. Während ein typischer Proxy dafür verwendet werden kann, mehreren Clients eines internen (privaten – in sich geschlossenen) Netzes den Zugriff auf ein externes Netz zu gewähren, funktioniert ein Reverse Proxy genau andersherum.
 
-![](../images/Magnifier_36x36.png "Quellenverzeichnis") 06 - Quellenverzeichnis
+Die OpenSSH-Suite ist fester Bestandteil quasi aller Linux-Distributionen.
+
+Diese drei wichtigen Eigenschaften führten zum Erfolg von ssh :
+* Authentifizierung der Gegenstelle, kein Ansprechen falscher Ziele
+* Verschlüsselung der Datenübertragung, kein Mithören durch Unbefugte
+* Datenintegrität, keine Manipulation der übertragenen Daten
+
+Wem die Authentifizierung über Passwörter trotz der Verschlüsselung zu unsicher ist, der benutzt das Public-Key-Verfahren. Hierbei wird asymmetrische Verschlüsselung genutzt, um den Benutzer zu authentifizieren. 
+
+![](../images/Magnifier_36x36.png "Quellenverzeichnis") 08 - Quellenverzeichnis
 ====== 
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
