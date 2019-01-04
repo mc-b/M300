@@ -14,7 +14,7 @@ Sie können eine Dynamischen Infrastruktur-Plattform (Private Cloud) einrichten,
 #### Inhaltsverzeichnis
 
 * 01 - [Cloud Computing](#-01---cloud-computing)
-* 02 - [Infrastrucuture as Code](#-02---infrastrucuture-as-code)
+* 02 - [Infrastructure as Code](#-02---infrastructure-as-code)
 * 03 - [Vagrant](#-03---vagrant)
 * 04 - [Packer (optional)](#-04---packer)
 * 05 - [AWS Cloud (optional)](#-05---aws-cloud)
@@ -77,7 +77,7 @@ Damit Infrastructure as Code (IaC) auf dynamischen Infrastruktur-Plattformen gen
 
 
 
-![](../images/Software-Konfiguration_36x36.png "Infrastructure as Code") 02 - Infrastrucuture as Code
+![](../images/Software-Konfiguration_36x36.png "Infrastructure as Code") 02 - Infrastructure as Code
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)

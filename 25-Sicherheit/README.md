@@ -1,45 +1,30 @@
-M300 - Infrastruktur-Sicherheit (35)
+M300 - 25 Infrastruktur-Sicherheit 
 ======
 
-Dieses Repository zeigt verschiedene Möglichkeiten auf, wie eine virtulisierte Infrastruktur in Punkto Sicherheit
-eingerichtet werden soll.
+Dieses Repository zeigt verschiedene Möglichkeiten auf, wie eine virtualisierte Infrastruktur in Punkto Sicherheit verbessert werden kann.
 
-#### Einleitung
+#### Lernziele
 
-Die nachstehende Dokumentation wurde von Michael Blickenstorfer im Rahmen des Moduls M300 (Plattformübergreifende Dienste in ein Netzwerk integrieren) erarbeitet und deckt folgende Inhalte ab:
-* Absichern der einzelnen VMs
-* Verstecken von Servern
-* Benutzer und Rechteverwaltung
-* Sichere Kommunikation via SSH
-* Authentifizierung, Autorisierung von Personen und Services
-
-
-#### Revision History
-
-| Datum         | Änderungen                                                                         |  Kürzel  |
-| ------------- |:-----------------------------------------------------------------------------------| :------: |
-| 21.10.2018    | Erstellung der Datei & erste Änderungen eingeführt                                 |    MBL   |
-| 31.10.2018    | Kleine Verbesserungen gemacht                                                      |    MBL   |
-|      ...      | ...                                                                                |    ...   |
+Sie können die Sicherheit in einer virtualisierte Infrastruktur Verbessern.
 
 #### Voraussetzungen
-* [X] macOS High Sierra (Version 10.13.6)
-* [X] VirtualBox (Version 5.2.18)
-* [X] Vagrant (Version 2.1.4)
-* [X] Vagrant Ubuntu-Server VM (Version 14.04 LTSB)
+* [10 Toolumgebung](../10-Toolumgebung/)
+* [20 Virtualisierte Infrastruktur](../20-Infrastruktur/)
 
 #### Inhaltsverzeichnis
-* 01 - [Firewall & Reverse Proxy](https://github.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit#-01---firewall--reverse-proxy)
-* 02 - [Benutzer- & Rechteverwaltung](https://github.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit#-02---benutzer---rechteverwaltung)
-* 03 - [SSH](https://github.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit#-03---ssh)
-* 04 - [Authentifizierung & Autorisierung](https://github.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit#-04---authentifizierung--autorisierung)
 
+* 01 - [Firewall & Reverse Proxy](01---firewall--reverse-proxy)
+* 02 - [Benutzer- & Rechteverwaltung (optional)](02---benutzer---rechteverwaltung)
+* 03 - [SSH](03---ssh)
+* 04 - [Authentifizierung & Autorisierung (optional)](04---authentifizierung--autorisierung)
+* 05 - [Fazit / Reflexion](#-05---reflexion--fragen)
+* 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
 ___
 
-![](https://raw.githubusercontent.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit/master/images/Firewall_36x36.png "Cloud Computing") 01 - Firewall & Reverse Proxy
+![](../images/Firewall_36x36.png "Cloud Computing") 01 - Firewall & Reverse Proxy
 ======
 
-> [⇧ **Nach oben**](https://github.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit#m300---infrastruktur-sicherheit-35)
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 Bis jetzt sind alle Services ungehindert Zugreifbar. Würden wir eine VM direkt in das Internet oder in eine DMZ stellen, hätten wir ein grösseres Sicherheitsproblem. Um das zu verhindern sperren wir nicht-öffentliche Ports mittels einer Firewall und verschlüsseln den restlichen Datenverkehr mit einem Reverse Proxy.
 
@@ -159,11 +144,10 @@ Die Weiterleitungen sind z.B. in `sites-enabled/001-reverseproxy.conf` eingetrag
 ```
 
 
-
-![](https://raw.githubusercontent.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit/master/images/Benutzer-_und_Rechteverwaltung_36x36.png "Benutzer- & Rechteverwaltung") 02 - Benutzer- & Rechteverwaltung
+![](../images/Benutzer-_und_Rechteverwaltung_36x36.png "Benutzer- & Rechteverwaltung") 02 - Benutzer- & Rechteverwaltung
 ======
 
-> [⇧ **Nach oben**](https://github.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit#m300---infrastruktur-sicherheit-35)
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 **Benutzer** <br>
 Linux kennt als Multiuser-Betriebssystem - wie alle unixoiden Betriebssysteme - das Konzept verschiedener Benutzer. Diese haben nicht alle unbedingt dieselben Rechte und Privilegien.
@@ -279,10 +263,10 @@ Folgende Befehle dienen zum ändern der Rechte:
 | `chgrp`       | Dient zum Ändern der Gruppe einer Datei              |
 
 
-![](https://raw.githubusercontent.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit/master/images/SSH_36x36.png "SSH") 03 - SSH
+![](../images/SSH_36x36.png "SSH") 03 - SSH
 ======
 
-> [⇧ **Nach oben**](https://github.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit#m300---infrastruktur-sicherheit-35)
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 Es gab einmal eine Zeit, als Computer im Netz über das Telnet-Protokoll zugänglich waren. Da dieses Protokoll keine Verschlüsselung bot, wurde das Mitschneiden von Passwörtern zur trivialen Angelegenheit.
 
@@ -365,62 +349,10 @@ Anschliessend kann man sich ohne Passwort anmelden:
     $ ssh admin01@db01 
 ```
 
-
-### SSH-Tunnel
-***
-Tunnel bzw. "Tunneling" bezeichnet in einem Netzwerk die Konvertierung und Übertragung eines Kommunikationsprotokolls, das für den Transport in ein anderes Kommunikationsprotokoll eingebettet wird.
-
-Vor und hinter den Tunnelpartnern wird somit das ursprüngliche Protokoll "gesprochen", während zwischen den Tunnelpartnern ein anderes Protokoll verwendet wird, das einer anderen Art der Kommunikation dient und dennoch die Daten des ursprünglichen Protokolls transportiert.
-
-Dafür wird die Tunnelsoftware auf beiden Seiten des Tunnels benötigt. Nachdem sie die ursprünglichen Kommunikationsdaten in ein anderes Protokoll eingebettet hat, muss die Software auf der jeweils anderen Seite des Tunnels die Daten wieder extrahieren und weiterreichen.
-
-**Wichtig:** Die Kommunikation im Tunnel erfolgt verschlüsselt!
-
-**Konfiguration** <br>
-Das nachfolgende Beispiel stammt aus dem IoTKit. Dabei werden Aufrufe von iotkit.mc-b.ch über den lokalen PC an den IoTKit weitergeleitet.
-
-Der IoTKit muss bei dieser Variante nicht SSH fähig sein.
-
-Als erstes muss die Datei `/etc/sshd_config` um folgende Zeilen erweitert werden:
-```Shell
-    ClientAliveInterval 30
-    ClientAliveCountMax 99999
-    GatewayPorts yes
-    AllowTcpForwarding yes
-```
-
-Anschliessend Linux-Server frisch starten (sudo reboot).
-
-**Tunnel aufbauen** 
-Um Abbrüche in der Verbindung zu verweiden, ist es besser `autossh` statt `ssh` zu verwenden.
-
-SSH-Tunnel via Smartphone:
-```Shell
-    ssh -N -i .ssh/aws-frankfurt-linux.pem -R 2222:localhost:22 -R 8090:192.168.43.87:80 ubuntu@iotkit.mc-b.ch
-    ssh -N -i .ssh/aws-frankfurt-linux.pem -R 2223:localhost:22 -R 8091:192.168.43.247:80 ubuntu@iotkit.mc-b.ch
-```
-
-SSH-Tunnel von Zuhause (Kitchen Helper + Smart Home):
-```Shell
-    ssh -N -i .ssh/aws-frankfurt-linux.pem -R 2222:localhost:22 -R 8090:192.168.178.45:80 ubuntu@iotkit.mc-b.ch
-    ssh -N -i .ssh/aws-frankfurt-linux.pem -R 2223:localhost:22 -R 8091:192.168.178.38:80 ubuntu@iotkit.mc-b.ch
-```
-
-Auf dem iotkit.mc-b.ch ist ausserdem folgender Reverse Proxy Einstellungen beim Apache-Webserver gesetzt:
-```Shell
-    ProxyPass /kt/rpc/ http://localhost:8090/rpc/
-    ProxyPassReverse /kt/rpc/ http://localhost:8090/rpc/
-
-    ProxyPass /rpc/ http://localhost:8091/rpc/
-    ProxyPassReverse /rpc/ http://localhost:8091/rpc/
-``` 
-
-
-
-![](https://raw.githubusercontent.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit/master/images/Authentifizierung_und_Autorisierung_36x36.png "Authentifizierung & Autorisierung") 04 - Authentifizierung & Autorisierung
+![](../images/Authentifizierung_und_Autorisierung_36x36.png "Authentifizierung & Autorisierung") 04 - Authentifizierung & Autorisierung
 ======
 
-> [⇧ **Nach oben**](https://github.com/TacoNaco47/M300_35_Infrastruktur-Sicherheit#m300---infrastruktur-sicherheit-35)
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 **Authentifizierung** <br>
 Authentifizierung ist der Nachweis (Verifizierung) einer behaupteten Eigenschaft einer Entität, die beispielsweise ein Mensch, ein Gerät, ein Dokument oder eine Information sein kann und die dabei durch ihren Beitrag ihre Authentisierung durchführt.
@@ -618,3 +550,17 @@ Der Begriff Identity-Management im Software-Umfeld umfasst keinen genau definier
 Eine Identity-Management-Architektur sollte über ein Provisionierungsmodul verfügen, das es erlaubt, den Benutzern automatisch aufgrund ihrer jeweiligen Rolle (und auch Aufgaben) in der Organisation individuelle Berechtigungen zu erteilen. Hier stellt sich aber bereits die Frage, wie weit Identity-Management über die ausschliessliche Verwaltung personenbezogener Daten hinweg Applikations-Funktionalitäten integrieren soll (z.B. ist die "Quota" auf einem Mailserver kein personenbezogenes Datum, sondern eine Applikations-Information).
 
 Identity-Management in einem Unternehmen hat vielfach Schnittstellen zum sogenannten Access-Management, das beispielsweise für Portale die Zugriffsrechte verwaltet, Single Sign-on (SSO) ermöglicht oder Security Policies verwaltet. Für die Kombination von Identity-Management und Access Management wurde in der IT daher mittlerweile der Begriff "Identity and Access Management" (IAM oder IdAM) geprägt.
+
+
+![](../images/Reflexion_36x36.png "Fazit / Reflexion") 05 - Reflexion / Fragen
+======
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
+
+
+
+![](../images/Magnifier_36x36.png "Quellenverzeichnis") 06 - Quellenverzeichnis
+====== 
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
+
