@@ -15,7 +15,7 @@ Sie können Dienste (engl. Services) plattformübergreifend in einem Netzwerk vo
 ### Inhaltsverzeichnis
 
 * [10 Toolumgebung aufsetzen](10-Toolumgebung/)
-* [20 Infrastruktur automatisierung](20-Infrastruktur/)
+* [20 Infrastruktur-Automatisierung](20-Infrastruktur/)
 * [25 Sicherheit](25-Sicherheit/)
 * [30 Container](30-Container/)
 * [35 Sicherheit](35-Sicherheit/)

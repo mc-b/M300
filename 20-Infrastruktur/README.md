@@ -9,7 +9,7 @@ Sie können eine Dynamischen Infrastruktur-Plattform (Private Cloud) einrichten,
 
 #### Voraussetzungen
 
-* [Toolumgebung](../10-Toolumgebung/)
+* [10 Toolumgebung](../10-Toolumgebung/)
 
 #### Inhaltsverzeichnis
 
@@ -18,10 +18,11 @@ Sie können eine Dynamischen Infrastruktur-Plattform (Private Cloud) einrichten,
 * 03 - [Vagrant](#-03---vagrant)
 * 04 - [Packer (optional)](#-04---packer)
 * 05 - [AWS Cloud (optional)](#-05---aws-cloud)
-
+* 06 - [Fazit / Reflexion](#-06---reflexion--fragen)
+* 07 - [Quellenverzeichnis](#-07---quellenverzeichnis)
 ___
 
-![](images/Cloud_Computing_36x36.png "Cloud Computing") 01 - Cloud Computing
+![](../../images/Cloud_Computing_36x36.png "Cloud Computing") 01 - Cloud Computing
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -76,7 +77,7 @@ Damit Infrastructure as Code (IaC) auf dynamischen Infrastruktur-Plattformen gen
 
 
 
-![](images/Software-Konfiguration_36x36.png "Infrastructure as Code") 02 - Infrastrucuture as Code
+![](../images/Software-Konfiguration_36x36.png "Infrastructure as Code") 02 - Infrastrucuture as Code
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -130,7 +131,7 @@ Folgende Arten von Tools werden für IaC benötigt:
     * Zur Versionskontrolle der Definitionsdateien und als Ablage vorbereiteter Images. (z.B. GitHub, Vagrant Boxes, Docker Hub, Windows VM)
 
 
-![](images/Vagrant_36x36.png "Vagrant") 03 - Vagrant
+![](../images/Vagrant_36x36.png "Vagrant") 03 - Vagrant
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -259,7 +260,7 @@ Z.B. das HTML-Verzeichnis des Apache-Webservers mit dem Host-Verzeichnis synchro
 
 
 
-![](images/Packer_36x36.png "Packer") 04 - Packer
+![](../images/Packer_36x36.png "Packer") 04 - Packer
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -539,7 +540,7 @@ Um die Box lokal zu verwenden, wird der Befehl `vagrant box` verwendet:
 
 
 
-![](images/AWS_36x36.png "AWS Cloud") 05 - AWS Cloud
+![](../images/AWS_36x36.png "AWS Cloud") 05 - AWS Cloud
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -664,3 +665,13 @@ Nachdem die Dateien config.rb und Vagrantfile erstellt wurden kann im erstellten
 ```Shell
     $ vagrant up web --provider=aws
 ```
+
+![](../images/Reflexion_36x36.png "Fazit / Reflexion") 06 - Reflexion / Fragen
+======
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
+
+
+
+![](../images/Magnifier_36x36.png "Quellenverzeichnis") 07 - Quellenverzeichnis
+====== 

@@ -24,7 +24,7 @@ Die nachstehende Dokumentation zeigt alle Schritte auf, die es zur Einrichtung e
 * 07 - [Quellenverzeichnis](#-07---quellenverzeichnis)
 ___
 
-![](images/GitHub_36x36.png "GitHub") 01 - GitHub Account 
+![](../images/GitHub_36x36.png "GitHub") 01 - GitHub Account 
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -118,7 +118,7 @@ Folgende Arbeiten müssen gemacht werden:
 > **Wikipedia:**    https://en.wikipedia.org/wiki/Ssh-agent
 
 
-![](images/Git_36x36.png "Git Client")  02 - Git Client
+![](../images/Git_36x36.png "Git Client")  02 - Git Client
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -231,7 +231,7 @@ $  git push                        #Upload bzw. Push wird durchgeführt
 ```
 
 
-![](images/VirtualBox_36x36.png "VirtualBox")  03 - VirtualBox
+![](../images/VirtualBox_36x36.png "VirtualBox")  03 - VirtualBox
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -305,7 +305,7 @@ Die virtuelle Maschine (VM) sollte nun soweit betriebsbereit sein, sprich der Zu
 9. Browser-Fenster schliessen und VM wieder herunterfahren/stoppen
 10. Mit dem Kapitel 4 (Vagrant) fortfahren
 
-![](images/Vagrant_36x36.png "Vagrant")  04 - Vagrant
+![](../images/Vagrant_36x36.png "Vagrant")  04 - Vagrant
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -406,7 +406,7 @@ Nachfolgend wird die VM mit einem bereits abgeänderten File bzw. VM aus dem dev
 7. Vagrant ist nun komplett einsatzfähig!
 
 
-![](images/VisualStudioCode_36x36.png "Visual Studio Code") 05 - Visual Studio Code
+![](../images/VisualStudioCode_36x36.png "Visual Studio Code") 05 - Visual Studio Code
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -478,14 +478,14 @@ Nun sollten keine Dateien mit den Endungen .git / .svn / .hg / .vagrant / .DS_st
 6. Bei den 3 Punkten (...) die Funktion **Push** aufrufen
 7. Warten, bis Dateien vollständig gepusht wurden
 
-![](images/Reflexion_36x36.png "Fazit / Reflexion") 06 - Reflexion / Fragen
+![](../images/Reflexion_36x36.png "Fazit / Reflexion") 06 - Reflexion / Fragen
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 
 
-![](images/Magnifier_36x36.png "Quellenverzeichnis") 07 - Quellenverzeichnis
+![](../images/Magnifier_36x36.png "Quellenverzeichnis") 07 - Quellenverzeichnis
 ====== 
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
