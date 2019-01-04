@@ -8,14 +8,14 @@ Diese Wikiseite behandelt die Installation von GitHub, VirtualBox, Vagrant und V
 Die nachstehende Dokumentation zeigt alle Schritte auf, die es zur Einrichtung einer vollständig funktionsfähigen Toolumgebung benötigt werden.
 
 #### Inhaltsverzeichnis
-* 01 - [GitHub Account](10_Toolumgebung#-01---github-account)
-* 02 - [Git Client](10_Toolumgebung#--02---git-client)
-* 03 - [VirtualBox](10_Toolumgebung#--03---virtualbox)
-* 04 - [Vagrant](10_Toolumgebung#--04---vagrant)
-* 05 - [Visual Studio Code](10_Toolumgebung#-05---visual-studio-code)
-* 06 - [Fazit / Reflexion](10_Toolumgebung#-06---reflexion--fragen)
-* 07 - [Quellenverzeichnis](10_Toolumgebung#-07---quellenverzeichnis)
 
+* 01 - [GitHub Account](#-01---github-account)
+* 02 - [Git Client](#--02---git-client)
+* 03 - [VirtualBox](#--03---virtualbox)
+* 04 - [Vagrant](#--04---vagrant)
+* 05 - [Visual Studio Code](#-05---visual-studio-code)
+* 06 - [Fazit / Reflexion](#-06---reflexion--fragen)
+* 07 - [Quellenverzeichnis](#-07---quellenverzeichnis)
 ___
 
 ![](images/GitHub_36x36.png "GitHub") 01 - GitHub Account 
