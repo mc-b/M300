@@ -21,7 +21,7 @@ Das Kapitel enthält Ergänzende Unterlagen zu den vorherigen Kapiteln.
 * [Tools](swkonfiguration/02-Tools.md)
     
 **Service Konfiguration**
-* [Einleitung](srvkonfigurationn/01-Einleitung.md)
-* [systemd](srvkonfigurationn/02-systemd.md)
-* [cron](srvkonfigurationn/03-cron.md)
-* [Anacron](srvkonfigurationn/04-Anacron.md)
+* [Einleitung](srvkonfiguration/01-Einleitung.md)
+* [systemd](srvkonfiguration/02-systemd.md)
+* [cron](srvkonfiguration/03-cron.md)
+* [Anacron](srvkonfiguration/04-Anacron.md)
