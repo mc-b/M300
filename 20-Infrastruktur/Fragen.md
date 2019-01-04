@@ -2,6 +2,7 @@ Fragen
 ======
 
 ### Cloud Computing
+***
 
 Was versteht man unter Cloud-Computing?
 
@@ -24,6 +25,7 @@ Die Infrastruktur stellt die unterste Schicht im Cloud Computing dar. Der Benutz
 ---
 
 ### Infrastructure as Code
+***
 
 Was ist der Unterschied zur manuellen Installation der VM
 <details><summary>Antwort</summary>
@@ -35,12 +37,14 @@ Was ist der Unterschied zur manuellen Installation der VM
 ---
 
 ### Vagrant
+***
 
 Was bedeutet die Fehlermeldung "A Vagrant environment or target machine is required to run this command."? 
 <details><summary>Antwort</summary>    
 	 Sie befinden im falschen Verzeichnis, wo keine Vagrantfile vorhanden ist.	
 </p></details>
 
+---
 
 In welchen Bereich des Cloud-Computings ist Vagrant einzuordnen: IaaS, PaaS, SaaS?
 <details><summary>Antwort</summary>    
