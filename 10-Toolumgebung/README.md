@@ -1,11 +1,17 @@
-M300 - Toolumgebung
+M300 - 10 Toolumgebung
 ===================
 
 Diese Wikiseite behandelt die Installation von GitHub, VirtualBox, Vagrant und Visual Studio Code.
 
-#### Einleitung
+#### Lernziele
 
 Die nachstehende Dokumentation zeigt alle Schritte auf, die es zur Einrichtung einer vollständig funktionsfähigen Toolumgebung benötigt werden.
+
+#### Voraussetzungen
+
+* PC mit min. 8 GB freiem RAM und ca. 20 GB freiem HD.
+* Einfache [Linux und Apache Web Server](../80-Ergaenzungen/) Kenntnisse sind von Vorteil.
+* Ein schneller Netzwerk- (Kabel!) und Internet-Anschluss
 
 #### Inhaltsverzeichnis
 
