@@ -20,9 +20,10 @@ Sie können eine Dynamischen Infrastruktur-Plattform (Private Cloud) einrichten,
 * 05 - [AWS Cloud (optional)](#-05---aws-cloud)
 * 06 - [Fazit / Reflexion](#-06---reflexion--fragen)
 * 07 - [Quellenverzeichnis](#-07---quellenverzeichnis)
+* 09 - [Beispiele](#-9--beispiele)
 ___
 
-![](../../images/Cloud_Computing_36x36.png "Cloud Computing") 01 - Cloud Computing
+![](../images/Cloud_Computing_36x36.png "Cloud Computing") 01 - Cloud Computing
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -47,7 +48,7 @@ Der Entwickler erstellt die Anwendung und lädt diese in die Cloud. Diese kümme
 Die Anwendungssicht stellt die abstrakteste Sicht auf Cloud-Dienste dar. Hierbei bringt der Benutzer seine Applikation weder in die Cloud ein, noch muss er sich um Skalierbarkeit oder Datenhaltung kümmern. Er nutzt eine bestehende Applikation, die ihm die Cloud nach aussen hin anbietet.
 
 
-### Dynamic Infrastrcuture Platforms
+### Dynamic Infrastructure Platforms
 ***
 
 Eine dynamische Infrastruktur-Plattform (Dynamic Infrastrucutre Platform) ist ein **System**, das Rechen-Ressourcen  virtualisiert und bereitstellt, insbesondere CPU (**compute**), Speicher (**storage**) und Netzwerke (**networks**). 
@@ -672,6 +673,21 @@ Nachdem die Dateien config.rb und Vagrantfile erstellt wurden kann im erstellten
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 
-
 ![](../images/Magnifier_36x36.png "Quellenverzeichnis") 07 - Quellenverzeichnis
 ====== 
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
+
+![](../images/Samples_36x36.png "Vagrant") 09 - Beispiele
+======
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
+
+* [web - Einfacher Webserver](web/)
+* [db - MySQL mit UserInterface](db/)
+* [script - Shellscript erstellt mehrere Web Server VM's](script/)
+* [mmdb - Multi Machine, Erstellung von mehreren VM's mittels Vagrantfile](mmdb/)
+* [lam - Linux, Apache, MySQL, REST Umgebung](lam/)
+* [iot - Umfangreicheres Beispiel mit Desktop Umgebung](iot/)
+
+

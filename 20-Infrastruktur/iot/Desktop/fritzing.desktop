@@ -1,0 +1,11 @@
+[Desktop Entry]
+MimeType=text/pro
+Name=Fritzing
+Exec=Fritzing
+Icon=fritzing_icon.png
+Categories=Development;Engineering;Electronics
+Type=Application
+Terminal=false
+Comment=PCB-Suite
+GenericName[en]=Easy-to-use electronic design software
+GenericName[es]=Software de diseño electrónico de fácil uso

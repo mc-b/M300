@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Gerbv Gerber File Viewer
+GenericName=Gerber File Viewer
+Comment=Gerber file viewer for PCB design
+Type=Application
+Exec=gerbv %F
+Icon=gerbv
+MimeType=application/x-gerber;application/x-excellon;
+Categories=Engineering;Electronics;

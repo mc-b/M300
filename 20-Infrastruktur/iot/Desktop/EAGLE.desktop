@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=EAGLE
+Comment=EAGLE Free Version von CADSoft
+Exec=/opt/eagle-7.5.0/bin/eagle
+Icon=/opt/eagle-7.5.0/bin/eagleicon16.png
+Path=
+Terminal=false
+StartupNotify=false

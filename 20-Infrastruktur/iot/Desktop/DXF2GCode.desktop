@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DXF2GCode
+Comment=AutoCAD DXF Format nach GCode
+Exec=/opt/dxf2gcode/source/dxf2gcode.py
+Icon=document-properties-symbolic
+Path=
+Terminal=false
+StartupNotify=false
