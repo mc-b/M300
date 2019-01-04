@@ -78,7 +78,7 @@ Wenn solch ein Monolith dann skaliert werden muss, kann man sich meist nur dazu 
 
 In einer Microservices-Architektur ist es möglich, nur die Ressourcen zu skalieren, die für einen bestimmten Service benötigt werden, und sich damit auf die Flaschenhälse des Systems zu beschränken. In einem Monolith wird alles oder gar nichts skaliert, was zu verschwendeten Ressourcen führt.
 
-[![](https://www.youtube.com/watch?time_continue=342&v=PH4HtZ8naWs/0.jpg)]((https://www.youtube.com/watch?time_continue=342&v=PH4HtZ8naWs))
+* [Einführungsvideo](https://www.youtube.com/watch?time_continue=342&v=PH4HtZ8naWs)
 
 ![](../images/Docker_36x36.png?raw=true "Docker") 02 - Docker
 ======
