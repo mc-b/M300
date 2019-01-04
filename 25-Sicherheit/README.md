@@ -1,7 +1,7 @@
 M300 - 25 Infrastruktur-Sicherheit 
 ======
 
-Dieses Repository zeigt verschiedene Möglichkeiten auf, wie eine virtualisierte Infrastruktur in Punkto Sicherheit verbessert werden kann.
+Diese Wikiseite zeigt verschiedene Möglichkeiten auf, wie eine virtualisierte Infrastruktur in Punkto Sicherheit verbessert werden kann.
 
 #### Lernziele
 
