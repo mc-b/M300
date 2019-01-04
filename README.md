@@ -9,7 +9,7 @@ Sie können Dienste (engl. Services) plattformübergreifend in einem Netzwerk vo
 #### Voraussetzungen
 
 * PC mit min. 8 GB freiem RAM und ca. 20 GB freiem Harddisk.
-* Einfache [Linux](../80-Ergaenzungen/) Kenntnisse sind von Vorteil.
+* Einfache [Linux](80-Ergaenzungen/) Kenntnisse sind von Vorteil.
 * Ein schneller Netzwerk- (Kabel!) und Internet-Anschluss
 
 ### Inhaltsverzeichnis
