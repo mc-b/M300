@@ -1,0 +1,54 @@
+#!/bin/bash
+#
+#   Mittels HTTP POST in MySQL Schreiben
+ 
+# HTTP Header fuer Client
+echo "Content-type: text/plain"
+echo ""
+ 
+#
+### GET
+#
+if [ "$REQUEST_METHOD" = "GET" ]
+then
+    export SQL="SELECT * FROM data;"
+ 
+    echo "$SQL"
+    echo ""
+    mysql -uwww-data -pmbed -hdb01 sensoren <<EOF
+    ${SQL}
+EOF
+ 
+fi
+ 
+#
+### POST
+#
+if [ "$REQUEST_METHOD" = "POST" ]
+then
+    # Zerlegt den Querystring in Einzelteile
+    saveIFS=$IFS
+    IFS='=&'
+    parm=(`cat -`)
+    IFS=$saveIFS
+ 
+    printf "write to SQL Database: "
+    FIELDS=""
+    DATA=""
+    for (( index = 0; index < ${#parm[@]}; index += 2 ))
+    do
+        if  [ ${index} -gt 0 ]
+        then
+            FIELDS=${FIELDS}","
+            DATA=${DATA}","
+        fi
+        FIELDS=${FIELDS}${parm[index]}
+        DATA=${DATA}${parm[index+1]}
+    done
+    SQL="INSERT INTO data( ${FIELDS} ) VALUES( ${DATA} );"
+    echo $SQL
+    mysql -uwww-data -pmbed -hdb01 sensoren <<EOF
+${SQL}
+EOF
+ 
+fi

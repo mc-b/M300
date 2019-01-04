@@ -1,0 +1,69 @@
+#!/bin/bash
+#
+#	Abhandlung der REST Methoden GET, POST, PUT, DELETE
+#
+#	Juni 2015 / Marcel mc-b Bernet
+
+
+# HTTP Header fuer Client
+echo "Content-type: text/plain"
+echo ""
+
+# / entfernen damit nicht in andere Verzeichnisse geschrieben werden kann
+QUERY_STRING=`echo $QUERY_STRING | sed 's:/::g'`
+
+#
+### GET
+#
+if [ "$REQUEST_METHOD" = "GET" ]
+then
+	if [ "$PATH_INFO" = "/time" ] 	
+	then
+		date "+%Y.%m.%d %H:%M:%S"
+	elif [ "$PATH_INFO" = "/timestamp" ] 
+	then
+		date "+%s"
+	else
+		printf "hello $PATH_INFO from `hostname` at `date '+%Y.%m.%d %H:%M:%S'`\n" 
+	fi
+fi
+
+#
+### POST
+#
+if [ "$REQUEST_METHOD" = "POST" ]
+then
+	# Zerlegt den Querystring in Einzelteile
+	saveIFS=$IFS
+	IFS='=&'
+	parm=(`cat -`)
+	IFS=$saveIFS
+
+	echo "append to http://`hostname`/data/post.txt"
+	printf "${REMOTE_ADDR} `date "+%Y.%m.%d %H:%M:%S"` " >>/var/www/html/data/post.txt
+	for (( index = 0; index < ${#parm[@]}; index += 2 ))
+	do
+		printf "${parm[index]} = ${parm[index+1]} " >>/var/www/html/data/post.txt
+	done
+	printf "\n" >>/var/www/html/data/post.txt
+fi
+
+#
+### PUT
+#
+if [ "$REQUEST_METHOD" = "PUT" ]
+then
+	echo "write to http://`hostname`/data/$QUERY_STRING"
+	cat - >/var/www/html/data/$QUERY_STRING
+fi
+
+#
+### DELETE
+#
+if [ "$REQUEST_METHOD" = "DELETE" ]
+then
+	echo "delete http://`hostname`/data/$QUERY_STRING"
+	rm -f /var/www/html/data/$QUERY_STRING
+fi
+
+

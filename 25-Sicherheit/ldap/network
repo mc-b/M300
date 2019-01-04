@@ -1,0 +1,12 @@
+#!/bin/bash
+# Ausgabe Netzwerk Geraete inkl. Ports
+
+# HTTP Header
+echo "Content-type: text/plain"
+echo ""
+
+# Nachrichtenrumpf
+echo "nmap -F -T4 192.168.55.* ..."
+echo "----------------------------"
+nmap -F -T4 "192.168.55.*"
+

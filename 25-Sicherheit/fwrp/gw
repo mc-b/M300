@@ -1,0 +1,18 @@
+#!/usr/bin/python
+# 
+# ngrok Gateway Adrese auslesen
+
+import json
+import os 
+
+os.system("curl  http://localhost:4040/api/tunnels > tunnels.json")
+
+with open('tunnels.json') as data_file:    
+    datajson = json.load(data_file)
+
+
+msg = "ngrok URL's: \n'"
+for i in datajson['tunnels']:
+  msg = msg + i['public_url'] +'\n'
+
+print (msg)

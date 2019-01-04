@@ -19,6 +19,7 @@ Sie können die Sicherheit in einer virtualisierte Infrastruktur Verbessern.
 * 04 - [Authentifizierung & Autorisierung (optional)](04---authentifizierung--autorisierung)
 * 05 - [Fazit / Reflexion](#-05---reflexion--fragen)
 * 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
+* 09 - [Beispiele](#-09---beispiele)
 ___
 
 ![](../images/Firewall_36x36.png "Cloud Computing") 01 - Firewall & Reverse Proxy
@@ -564,3 +565,15 @@ Identity-Management in einem Unternehmen hat vielfach Schnittstellen zum sogenan
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
+![](../images/Samples_36x36.png "Vagrant") 09 - Beispiele
+======
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
+
+* [user - Anlegen von User](user/)
+* [ssh - Anlegen von SSH Key's](ssh/)
+* [ldap - Mit LDAP Server](ldap/)
+* [rest - REST Beispiel mit cgi-bin Script](rest/)
+* [tests - Tests ob Installation der Services erfolgreich war](tests/)
+* [fwrp - Firewall und Reverse Proxy](fwrp/)
+* [iotsrv - 3 VM's mit Apache, MySQL, cron](iotsrv/)
