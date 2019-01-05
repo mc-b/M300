@@ -25,7 +25,6 @@ Dazu ist zuerst ein geeignetes Frontend, welches eine Datenbank benötigt auf [d
 Frontend Kandidaten sind z.B.:
 * [Ghost](https://hub.docker.com/_/ghost/)
 * [Nextcloud](https://hub.docker.com/_/nextcloud/)
-* [Drupal](library/drupal - Docker Hub)
 * [Redmine](https://hub.docker.com/_/redmine/)
 
 Ein komplettes Beispiel verpackt als Vagrantfile ist [OS Ticket](../services/osticket) oder [ghost](../services/ghost).
@@ -105,7 +104,7 @@ Umwandlung `Vagrantfile` nach `Dockerfile`:
 
 Nachdem die Container laufen, sollten die Images auf evtl. Sicherheitslücken überprüft werden. Ebenfall sollte sichergestellt werden, dass die Container nicht unbeschränkt Systemressourcen beanspruchen 
 
-Anhaltspunkte dazu liefert das Kapitel 460:
+Anhaltspunkte dazu liefert das Kapitel 35 Container-Sicherheit:
 - [Container sichern und beschraenken](../35-Sicherheit/)
 
 #### Testen und Health Check
@@ -113,6 +112,6 @@ Anhaltspunkte dazu liefert das Kapitel 460:
 Um Abstürze in laufenden Containern zu erkennen, gibt es u.a. den Eintrag `HEALTHCHECK` in `Dockerfile`.
 
 Weitere Informationen stehen im Kapitel Docker Grundlagen und in der Docker Referenz Dokumentation:
-* [Dockerfile](README.md)
+* [Dockerfile](README.md#dockerfile)
 * [Dockerfile reference](https://docs.docker.com/engine/reference/builder/#healthcheck)
 
