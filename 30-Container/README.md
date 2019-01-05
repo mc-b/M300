@@ -73,6 +73,8 @@ Docker wurde für 64-bit Linux Systeme Entwickelt, kann jedoch auch mittels Virt
 
 [![](https://img.youtube.com/vi/PH4HtZ8naWs/0.jpg)](https://www.youtube.com/watch?v=PH4HtZ8naWs)
 
+Microservices YouTube Einführung
+
 ---
 
 Einer der grössten Anwendungsfälle und die stärkste treibende Kraft hinter dem Aufstieg von Containern sind Microservices.
