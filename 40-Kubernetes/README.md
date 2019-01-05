@@ -12,15 +12,19 @@ Sie können einen einfachen Kubernetes Kluster aufsetzen.
 * [10 Toolumgebung](../10-Toolumgebung/)
 
 #### Inhaltsverzeichnis
-* 01 - [Infrastructure as Code](#-01---kubernetes)
-* 02 - [Vagrant](#-01---kubernetes-cluster)
-* 03 - [Fazit / Reflexion](#-04---reflexion--fragen)
+* 01 - [Kubernetes](#-01---kubernetes)
+* 02 - [Kubernetes Cluster](#-01---kubernetes-cluster)
+* 03 - [Reflexion](#-03---reflexion)
 * 04 - [Quellenverzeichnis](#-04---quellenverzeichnis)
 
 ![](../images/Kubernetes_36x36.png "Cloud Computing") 01 - Kubernetes
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
+
+[![](https://img.youtube.com/vi/PH-2FfFD2PU/0.jpg)](https://www.youtube.com/watch?v=PH-2FfFD2PU)
+
+---
 
 Kubernetes (auch als „K8s“ oder einfach „K8“ bezeichnet - *sprich immer: 'Kuhbernetties'*) ist ein Open-Source-System zur Automatisierung der Bereitstellung, Skalierung und Verwaltung von Container-Anwendungen, das ursprünglich von Google entworfen und an die Cloud Native Computing Foundation gespendet wurde. Es zielt darauf ab, eine „Plattform für das automatisierte Bespielen, Skalieren und Warten von Anwendungscontainern auf verteilten Hosts“ zu liefern. Es unterstützt eine Reihe von Container-Tools, einschließlich Docker.
 
@@ -148,7 +152,7 @@ Es wird ein Master und zwei Worker Nodes erstellt. Der Master und die Worker Nod
 
 Die IP-Adressen werden fix vergeben. Bei fixer IP-Adressen Vergabe, muss ein "Default Router" gesetzt sein, ebenfalls muss ein "Public Network" verwendet werden. Ansonsten finden sich zwar Master und Worker, können aber nicht miteinnander kommunizieren.
 
-![](../images/Reflexion_36x36.png "Fazit / Reflexion") 03 - Reflexion / Fragen
+![](../images/Reflexion_36x36.png "Fazit / Reflexion") 03 - Reflexion
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
