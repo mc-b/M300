@@ -16,7 +16,7 @@ Sie können Applikationen und Services als Container betrieben und als Container
 * 01 - [Container](#-01---container)
 * 02 - [Docker](#-02---docker)
 * 03 - [Netzwerk-Anbindung (optional)](#-03---netzwerk-anbindung)
-* 04 - [Volumes (optinal)](#-04---volumes)
+* 04 - [Volumes (optional)](#-04---volumes)
 * 05 - [Image-Bereitstellung](#-05---image-bereitstellung)
 * 06 - [Reflexion](#-06---reflexion)
 * 07 - [Fragen](Fragen.md)
