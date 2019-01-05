@@ -351,6 +351,43 @@ Anschliessend kann man sich ohne Passwort anmelden:
     $ ssh admin01@db01 
 ```
 
+### SSH Tunnel
+
+Tunnel bzw. Tunneling bezeichnet in einem Netzwerk die Konvertierung und Übertragung eines Kommunikationsprotokolls, das für den Transport in ein anderes Kommunikationsprotokoll eingebettet wird. 
+
+Vor und hinter den Tunnelpartnern wird somit das ursprüngliche Protokoll „gesprochen“, während zwischen den Tunnelpartnern ein anderes Protokoll verwendet wird, das einer anderen Art der Kommunikation dient und dennoch die Daten des ursprünglichen Protokolls transportiert. 
+
+Dafür wird die Tunnelsoftware auf beiden Seiten des Tunnels benötigt. Nachdem sie die ursprünglichen Kommunikationsdaten in ein anderes Protokoll eingebettet hat, muss die Software auf der jeweils anderen Seite des Tunnels die Daten wieder extrahieren und weiterreichen.
+
+**Die Kommunikation im Tunnel erfolgt verschlüsselt!**
+
+### Befehle (mit VMs aus Beispiel `vagrant/user`)
+
+Weiterleitung von Port 8000 auf dem lokalen System (database/db01) an den Webserver web/web01 (192.168.55.101:80):
+
+	cd user
+	vagrant ssh database
+	# Wechsel auf User admin01
+	sudo su - admin01
+	# in der VM
+	ssh -L 8000:localhost:80 web01 -N &
+	netstat -tulpen
+	curl http://localhost:8000
+
+Umgekehrte Richtung. Benutzern auf web/web01 wird ermöglicht, über localhost:3307 auf den MySQL-Server auf database/db01 zuzugreifen:
+
+	vagrant ssh database
+	# in der VM database
+	ssh -R 3307:localhost:3306 web01 -N &
+	ssh web01
+	# in der VM web
+	netstat -tulpen
+	curl http://localhost:3307
+
+	
+**ACHTUNG:** Der db01 Server muss über einen Privaten SSH-Key verfügen und der Public SSH-Key muss in web01 eingetragen sein. Zusätzlich muss bereits einmal via `ssh` von db01 in den web01 Server gewechselt worden sein.
+
+
 ![](../images/Authentifizierung_und_Autorisierung_36x36.png "Authentifizierung & Autorisierung") 04 - Authentifizierung & Autorisierung
 ======
 
