@@ -1,0 +1,32 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+
+VAGRANTFILE_API_VERSION = "2"
+  CONFIG = "#{File.dirname(__FILE__)}/config.rb"
+  if File.exist?(CONFIG)
+  require CONFIG
+  end
+  Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.define "web" do |web|
+    web.vm.box = "dummy"
+      web.vm.provider "aws" do |aws, override|
+      override.ssh.username = "ubuntu"
+      override.ssh.private_key_path = "#{File.dirname(__FILE__)}/aws-frankfurt-linux.pem"
+      aws.access_key_id = $aws_options[:access_key]
+      aws.secret_access_key = $aws_options[:secret_key]
+      aws.keypair_name = $aws_options[:ec2_keypair]
+      aws.region = $aws_options[:region]
+      aws.ami = $aws_options[:ami_id]
+      aws.instance_type = $aws_options[:instance_type]
+      aws.security_groups = $aws_options[:security_group]
+      aws.tags = {
+        'Name' => 'Vagrant Web Server',
+        }
+     end
+  end
+    config.vm.provision "shell", inline: <<-SHELL 
+      sudo apt-get update
+      sudo apt-get -y install apache2
+    SHELL
+end

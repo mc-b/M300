@@ -700,11 +700,11 @@ muss die Plattform via Programmierschnittstelle ([API](https://de.wikipedia.org/
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
-* [web - Einfacher Webserver](web/)
-* [db - MySQL mit UserInterface](db/)
-* [script - Shellscript erstellt mehrere Web Server VM's](script/)
-* [mmdb - Multi Machine, Erstellung von mehreren VM's mittels Vagrantfile](mmdb/)
-* [lam - Linux, Apache, MySQL, REST Umgebung](lam/)
-* [iot - Umfangreicheres Beispiel mit Desktop Umgebung](iot/)
+* [web - Einfacher Webserver](../vagrant/web/)
+* [db - MySQL mit UserInterface](../vagrant/db/)
+* [script - Shellscript erstellt mehrere Web Server VM's](../vagrant/script/)
+* [mmdb - Multi Machine, Erstellung von mehreren VM's mittels Vagrantfile](../vagrant/mmdb/)
+* [lam - Linux, Apache, MySQL, REST Umgebung](../vagrant/lam/)
+* [iot - Umfangreicheres Beispiel mit Desktop Umgebung](../vagrant/iot/)
 
 

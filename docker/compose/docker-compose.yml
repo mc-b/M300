@@ -1,0 +1,21 @@
+#
+# LAM Umgebung
+
+version: '2'
+services:
+ mysql:
+  image: mysql
+  ports:
+   - 3306:3306
+# Fehler: Volume Mount fuehrt zum Absturz des MySQL Daemons
+# volumes:
+#  - /vagrant/compose/data:/var/lib/mysql
+
+ apache:
+  image: apache
+  ports:
+   - 8080:80
+  volumes:
+   - /vagrant/compose/web:/var/www/html
+  links:
+  - mysql
