@@ -152,11 +152,11 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 2. Terminal öffnen
 3. Repository klonen: 
     ```Shell
-      $ git clone https://github.com/mc-b/devops
+      $ git clone https://github.com/mc-b/M300
     ``` 
-4. In das devops-Verzeichnis wechseln:
+4. In das M300-Verzeichnis wechseln:
     ```Shell
-      $ cd devops
+      $ cd M300
     ``` 
 5. Repository aktualisieren und Status anzeigen:
     ```Shell
@@ -386,12 +386,12 @@ Schlussfolgerung: Keine erheblichen Unterschiede zum ersten Teil (ohne Share) un
 ***
 Um den Automatisierungsgrad von Vagrant im Rahmen dieser Dokumentation etwas besser hervorzuheben, richten wir eine VM, dass sie direkt mit einem vorinstallierten Apache-Webserver startet. Dazu können wir im Vagrantfile den Code etwas leicht abändern und direkt auf Bash-Ebene mit einfachen Befehlen arbeiten. 
 
-Nachfolgend wird die VM mit einem bereits abgeänderten File bzw. VM aus dem devops-Repository erstellt:
+Nachfolgend wird die VM mit einem bereits abgeänderten File bzw. VM aus dem M300-Repository erstellt:
 
 1. Terminal öffnen
-2. In das devops-Verzeichnis (\devops\vagrant\web) wechseln:
+2. In das M300-Verzeichnis (\M300\vagrant\web) wechseln:
     ```Shell
-      $ cd Pfad\zum\dvops-Verzeichnis\devops\vagrant\web
+      $ cd Pfad\zum\dvops-Verzeichnis\M300\vagrant\web
     ``` 
 3. VM erstellen und starten:
     ```Shell

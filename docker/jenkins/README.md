@@ -32,7 +32,7 @@ Apache Web Server analog anlegen wie oben aber mit folgendem Build Schritt:
 	
 Bessere Variante mit `git clone` (Sourcen von GitHub):
 
-	rm -rf devops
-	git clone https://github.com/mc-b/devops.git
-	cd devops/docker/apache
+	rm -rf M300
+	git clone https://github.com/mc-b/M300.git
+	cd M300/docker/apache
 	sudo docker build -t apache .
