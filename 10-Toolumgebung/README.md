@@ -20,8 +20,7 @@ Die nachstehende Dokumentation zeigt alle Schritte auf, die es zur Einrichtung e
 * 03 - [VirtualBox](#--03---virtualbox)
 * 04 - [Vagrant](#--04---vagrant)
 * 05 - [Visual Studio Code](#-05---visual-studio-code)
-* 06 - [Fazit / Reflexion](#-06---reflexion--fragen)
-* 07 - [Quellenverzeichnis](#-07---quellenverzeichnis)
+* 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
 ___
 
 ![](../images/GitHub_36x36.png "GitHub") 01 - GitHub Account 
@@ -478,14 +477,8 @@ Nun sollten keine Dateien mit den Endungen .git / .svn / .hg / .vagrant / .DS_st
 6. Bei den 3 Punkten (...) die Funktion **Push** aufrufen
 7. Warten, bis Dateien vollständig gepusht wurden
 
-![](../images/Reflexion_36x36.png "Fazit / Reflexion") 06 - Reflexion / Fragen
-======
 
-> [⇧ **Nach oben**](#inhaltsverzeichnis)
-
-
-
-![](../images/Magnifier_36x36.png "Quellenverzeichnis") 07 - Quellenverzeichnis
+![](../images/Magnifier_36x36.png "Quellenverzeichnis") 06 - Quellenverzeichnis
 ====== 
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
