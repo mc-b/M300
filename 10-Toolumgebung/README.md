@@ -49,11 +49,10 @@ Folgende Arbeiten müssen gemacht werden:
 6. Haken bei <strong>Initialize this repository with a README</strong> setzen
 7. Auf <strong>Create repository</strong> klicken
    
-
 ### SSH-Key erstellen (lokal)
 ***
 
-**ACHTUNG**: Auf Windows muss zuerst Git/Bash installiert werden. Anschliessend können die Befehle in der Git/Bash ausgeführt werden.
+**ACHTUNG**: Auf Windows muss zuerst [Git/Bash](#--02---git-client) installiert werden. Anschliessend können die Befehle in der Git/Bash ausgeführt werden.
 
 1.  Terminal öffnen
 2.  Folgenden Befehl mit der Account-E-Mail von GitHub einfügen:
@@ -73,7 +72,6 @@ Folgende Arbeiten müssen gemacht werden:
       Enter passphrase (empty for no passphrase): [Passwort]
       Enter same passphrase again: [Passwort wiederholen]
     ```
-
 
 ### SSH-Key dem SSH-Agent hinzufügen 
 ***
