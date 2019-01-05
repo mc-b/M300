@@ -21,6 +21,7 @@ Die nachstehende Dokumentation zeigt alle Schritte auf, die es zur Einrichtung e
 * 04 - [Vagrant](#--04---vagrant)
 * 05 - [Visual Studio Code](#-05---visual-studio-code)
 * 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
+
 ___
 
 ![](../images/GitHub_36x36.png "GitHub") 01 - GitHub Account 
