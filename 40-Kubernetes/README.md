@@ -13,7 +13,7 @@ Sie können einen einfachen Kubernetes Kluster aufsetzen.
 
 #### Inhaltsverzeichnis
 * 01 - [Kubernetes](#-01---kubernetes)
-* 02 - [Kubernetes Cluster](#-01---kubernetes-cluster)
+* 02 - [Kubernetes Cluster](#-02---kubernetes-cluster)
 * 03 - [Reflexion](#-03---reflexion)
 * 04 - [Quellenverzeichnis](#-04---quellenverzeichnis)
 
