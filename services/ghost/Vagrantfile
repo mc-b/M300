@@ -1,0 +1,31 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+#
+#	Ubuntu Version 16.x 64-bit Linux mit Docker und ghost
+#
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ubuntu/xenial64"
+
+  # Create a public network, which generally matched to bridged network.
+  #config.vm.network "public_network"
+  config.vm.network "forwarded_port", guest:2368, host:2368, auto_correct: true
+  config.vm.network "forwarded_port", guest:8080, host:8080, auto_correct: true
+  
+  # Share an additional folder to the guest VM.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  config.vm.provider "virtualbox" do |vb|
+     vb.memory = "512"
+  end
+
+  # Docker Provisioner
+  config.vm.provision "docker" do |d|
+   d.pull_images "mysql:5.7"
+   d.pull_images "ghost:1-alpine"
+   d.run "ghost_mysql", image: "mysql:5.7", args: "-e MYSQL_ROOT_PASSWORD=admin -e MYSQL_USER=ghost -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=ghost --restart=always"
+   d.run "ghost", image: "ghost:1-alpine", args: "--link ghost_mysql:mysql -e database__client=mysql -e database__connection__host=ghost_mysql -e database__connection__user=ghost -e database__connection__password=secret -e database__connection__database=ghost -p 2368:2368 --restart=always"
+  end
+end

@@ -20,7 +20,8 @@ Sie können Applikationen und Services als Container betrieben und als Container
 * 05 - [Image-Bereitstellung](#-05---image-bereitstellung)
 * 06 - [Reflexion](#-06---reflexion)
 * 07 - [Fragen](Fragen.md)
-* 08 - [Quellenverzeichnis](#-08---quellenverzeichnis)
+* 08 - [LB 2 hands-on](LB2.md)
+* 09 - [Quellenverzeichnis](#-09---quellenverzeichnis)
 
 ___
 
@@ -802,5 +803,5 @@ Anschliessend können die vorhanden Images von unserer lokalen Docker Registry g
 
 
 
-![](../images/Magnifier_36x36.png "Quellenverzeichnis") 07 - Quellenverzeichnis
+![](../images/Magnifier_36x36.png "Quellenverzeichnis") 09 - Quellenverzeichnis
 ====== 

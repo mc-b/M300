@@ -1,0 +1,30 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+#
+#	Ubuntu Version 16.x 64-bit Linux mit Docker
+#
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ubuntu/xenial64"
+
+  # Create a public network, which generally matched to bridged network.
+  #config.vm.network "public_network"
+  config.vm.network "forwarded_port", guest:8080, host:8080, auto_correct: true
+  
+  # Share an additional folder to the guest VM.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  config.vm.provider "virtualbox" do |vb|
+     vb.memory = "2048"
+  end
+
+  # Docker Provisioner
+  config.vm.provision "docker" do |d|
+   d.pull_images "mysql"
+   d.pull_images "campbellsoftwaresolutions/osticket"
+   d.run "osticket_mysql", image: "mysql", args: "-e MYSQL_ROOT_PASSWORD=secret -e MYSQL_USER=osticket -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=osticket --restart=always"
+   d.run "osticket", image: "campbellsoftwaresolutions/osticket", args: "--link osticket_mysql:mysql -p 8080:80 --restart=always"
+  end
+end
