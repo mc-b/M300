@@ -12,15 +12,70 @@ Sie können einen einfachen Kubernetes Kluster aufsetzen.
 * [10 Toolumgebung](../10-Toolumgebung/)
 
 #### Inhaltsverzeichnis
-* 01 - [Kubernetes](#-01---kubernetes)
-* 02 - [Kubernetes Cluster](#-02---kubernetes-cluster)
-* 03 - [Reflexion](#-03---reflexion)
-* 04 - [Fragen](Fragen.md)
-* 05 - [Quellenverzeichnis](#-05---quellenverzeichnis)
+* 01 - [Grundbegriffe](#-01---grundbegriffe)
+* 02 - [Kubernetes](#-02---kubernetes)
+* 03 - [Kubernetes Cluster](#-03---kubernetes-cluster)
+* 04 - [Reflexion](#-04---reflexion)
+* 05 - [Fragen](Fragen.md)
+* 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
 
 ___
 
-![](../images/Kubernetes_36x36.png "Cloud Computing") 01 - Kubernetes
+![](../images/Kubernetes_36x36.png "Cloud Computing") 01 - Grundbegriffe
+======
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
+
+### Service Discovery
+***
+ 
+Service Discovery ist der Prozess, Clients eines Service mit Verbindungsinformationen (normalerweise IP-Adresse und
+Port) einer passenden Instanz davon zu versorgen.
+
+In einem statischen System auf einem Host ist das Problem einfach zu lösen, denn es gibt nur eine Instanz von allem. 
+
+In einem verteilten System mit mehreren Instanzen von Services, die kommen und gehen, ist das aber viel komplizierter. 
+
+Eine Möglichkeit ist, dass der Client einfach den Service über den Namen anfordert (zum Beispiel db oder api) und im Backend dann ein bisschen Magie geschieht, die dazu die passenden Daten liefert. 
+
+Für unsere Zwecke kann Vernetzung als der Prozess des Verknüpfens von Containern betrachtet werden. 
+
+Es geht nicht darum, reale Ethernet-Kabel einzustecken. Containervernetzung beginnt mit der Annahme, dass es eine Route zwischen Hosts
+gibt – egal, ob diese Route über das öffentliche Internet läuft oder nur über einen schnellen lokalen Switch.
+
+Mit dem Service Discovery können Clients also Instanzen finden, und die Vernetzung kümmert sich darum, die Verbindungen herzustellen. 
+
+Vernetzungs Service-Discovery-Lösungen haben häufig gemeinsame Funktionalität, da Service-Discovery-Lösungen auf Ziele im Netz verweisen und Vernetzungslösungen häufig auch Service-Discovery-Features enthalten.
+
+Weitere Funktionen von Service Discovery können sein:
+
+* Health Checking
+* Failover 
+* [Load Balancing](https://de.wikipedia.org/wiki/Lastverteilung_%28Informatik%29)
+* Verschlüsselung der übertragenen Daten 
+* Isolieren von Containergruppen.
+
+### Lastverteilung (Load Balancing)
+***
+
+Mittels Lastverteilung (englisch Load Balancing) werden in der Informatik umfangreiche Berechnungen oder große Mengen von Anfragen auf mehrere parallel arbeitende Systeme verteilt. 
+
+Insbesondere bei Webservern ist eine Lastverteilung wichtig, da ein einzelner Host nur eine begrenzte Menge an HTTP-Anfragen auf einmal beantworten kann. 
+
+Für unsere Zwecke kann Lastverteilung als der Prozess des Verteilens von Anfragen auf verschiedene Container betrachtet werden.
+
+### Cluster
+***
+
+Ein [Rechnerverbund oder Computercluster](https://de.wikipedia.org/wiki/Rechnerverbund), meist einfach Cluster genannt (vom Englischen für „Rechner-Schwarm“, „-Gruppe“ oder „-Haufen“), bezeichnet eine Anzahl von vernetzten Computern. 
+
+Der Begriff wird zusammenfassend für zwei unterschiedliche Aufgaben verwendet: 
+* die Erhöhung der Rechenkapazität (HPC-Cluster) 
+* die Erhöhung der Verfügbarkeit (HA-Cluster, engl. high available - hochverfügbar). 
+
+Die in einem Cluster befindlichen Computer (auch Knoten, vom englischen nodes oder Server) werden auch oft als Serverfarm bezeichnet.
+
+![](../images/Kubernetes_36x36.png "Cloud Computing") 02 - Kubernetes
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -113,7 +168,7 @@ Ein Apache Web Server kann wie folgt Bereitgestellt werden:
 * [Homepage](http://kubernetes.io)
 * [Beispiele](https://github.com/mc-b/duk)
 
-![](../images/Kubernetes_36x36.png "Cloud Computing") 02 - Kubernetes Cluster
+![](../images/Kubernetes_36x36.png "Cloud Computing") 03 - Kubernetes Cluster
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -157,14 +212,14 @@ Es wird ein Master und zwei Worker Nodes erstellt. Der Master und die Worker Nod
 
 Die IP-Adressen werden fix vergeben. Bei fixer IP-Adressen Vergabe, muss ein "Default Router" gesetzt sein, ebenfalls muss ein "Public Network" verwendet werden. Ansonsten finden sich zwar Master und Worker, können aber nicht miteinnander kommunizieren.
 
-![](../images/Reflexion_36x36.png "Fazit / Reflexion") 03 - Reflexion
+![](../images/Reflexion_36x36.png "Fazit / Reflexion") 04 - Reflexion
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 
 
-![](../images/Magnifier_36x36.png "Quellenverzeichnis") 05 - Quellenverzeichnis
+![](../images/Magnifier_36x36.png "Quellenverzeichnis") 06 - Quellenverzeichnis
 ====== 	
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
