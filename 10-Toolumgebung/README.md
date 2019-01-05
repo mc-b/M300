@@ -43,7 +43,7 @@ Folgende Arbeiten müssen gemacht werden:
 ***
 1. Anmelden unter www.github.com 
 2. Innerhalb der Willkommens-Seite auf <strong>Start a project</strong> klicken
-3. Unter <strong>Repository name</strong> einen Name definieren (z.B. M300)
+3. Unter <strong>Repository name</strong> einen Name definieren (z.B. M300-Services)
 4. Optional: kurze Beschreibung eingeben
 5. Radio-Button bei <strong>Public</strong> belassen
 6. Haken bei <strong>Initialize this repository with a README</strong> setzen
@@ -52,6 +52,9 @@ Folgende Arbeiten müssen gemacht werden:
 
 ### SSH-Key erstellen (lokal)
 ***
+
+**ACHTUNG**: Auf Windows muss zuerst Git/Bash installiert werden. Anschliessend können die Befehle in der Git/Bash ausgeführt werden.
+
 1.  Terminal öffnen
 2.  Folgenden Befehl mit der Account-E-Mail von GitHub einfügen:
     ```Shell
@@ -72,8 +75,15 @@ Folgende Arbeiten müssen gemacht werden:
     ```
 
 
-### SSH-Key dem SSH-Agent hinzufügen
+### SSH-Key dem SSH-Agent hinzufügen 
 ***
+
+**Windows und Linux**
+
+Datei %HOME%/.ssh/id_rsa.pub oder $HOME/.ssh/id_rsa.pub in Zwischenablage kopieren.
+
+**macOS**
+
 1.  Terminal öffnen
 2.  SSH-Agent starten:
     ```Shell
@@ -93,12 +103,11 @@ Folgende Arbeiten müssen gemacht werden:
     ```Shell
       $ ssh-add -K ~/.ssh/id_rsa
     ```
-5.  Der SSH-Key muss nun nur noch kopiert und anschliessend dem GitHub-Account hinzugefüg werden (siehe "SSH-Key hinzufügen"):
+5.  Der SSH-Key muss nun nur noch kopiert und anschliessend dem GitHub-Account hinzugefügt werden (siehe "SSH-Key hinzufügen"):
     ```Shell
       $ pbcopy < ~/.ssh/id_rsa.pub
       # Kopiert den Inhalt der id_rsa.pub Datei in die Zwischenablage
     ``` 
-
 
 ### SSH-Key hinzufügen
 ***
@@ -123,14 +132,14 @@ Folgende Arbeiten müssen gemacht werden:
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
-Damit die Arbeiten lokal auf dem eigenen PC erfolgen können, muss der sogenannte "Git Client" installiert werden. Dieser ermöglicht uns,
+Damit die Arbeiten lokal auf dem eigenen PC erfolgen können, muss der sogenannte "Git Client", auf Windows "Git/Bash" installiert werden. Dieser ermöglicht uns,
 Cloud-Repositories zu klonen, zu pullen (herunteraden) oder ein lokales Repository zu pushen (hochladen).
 
 Hierzu müssen folgende Schritte durchgeführt werden: 
 
 ### Client installieren
 ***
-1. Für die Client-Installation muss der Installer unter [dieser Webseite](http://sourceforge.net/projects/git-osx-installer/ "sourceforge.net/projects/git-osx-installer") heruntergeladen werden (Version 2.15.0)
+1. Für die Client-Installation muss der Installer unter [dieser Webseite](https://git-scm.com/downloads) heruntergeladen werden 
 2. Die Installation erfolgt GUI-basiert, jedoch standard (ohne speziellen Anpassungen). Daher wird an dieser Stelle auf eine Erklärung verzichtet.
 3. Sobald der Vorgang abgeschlossen wurde, kann mit der Konfiguration fortgefahren werden.
 
@@ -243,15 +252,14 @@ Folgende Arbeiten müssen gemacht werden:
 ### Software herunterladen & installieren
 ***
 1. Zuerst muss die VirtualBox-Anwendung installiert werden. Der Installer lässt sich [hier](https://www.virtualbox.org"virtualbox.org") herunterladen.
-2. Auf "Download VirtualBox 5.2" klicken und bei Abschnitt "VirtualBox 5.2.19 platform packages" dem OS X hosts Link folgen (Datei wird heruntergeladen)
-3. Die Installation erfolgt GUI-basiert, jedoch standard (ohne speziellen Anpassungen). Daher wird an dieser Stelle auf eine Erklärung verzichtet.
-4. Sobald der Vorgang abgeschlossen wurde, kann mit dem Herunterladen der ISO-Datei und der VM-Erstellung fortgefahren werden.
+2. Die Installation erfolgt GUI-basiert, jedoch standard (ohne speziellen Anpassungen). Daher wird an dieser Stelle auf eine Erklärung verzichtet.
+3. Sobald der Vorgang abgeschlossen wurde, kann mit dem Herunterladen der ISO-Datei und der VM-Erstellung fortgefahren werden.
 
 ### ISO-Datei herunterladen
 ***
 Für das weitere Vorgehen wird eine System-Abbild-Datei benötigt. Dazu laden wir in unserem Fall das Image von Ubuntu Desktop 16.04.05 herunter. Wie das genau funktioniert, wird nachfolgend beschrieben:
 
-1. Das Systemabbild (ISO-Image) über [diesen Link](http://releases.ubuntu.com/16.04/ubuntu-16.04.5-desktop-amd64.iso.torrent"ubuntu.com") herunterladen
+1. Das Systemabbild (ISO-Image) über [diesen Link](https://www.ubuntu.com/#download) herunterladen. Wenn Download zu lange geht USB Stick vom Lehrer erfragen.
 2. Datei im gewünschten Verzeichnis ablegen (damit das Image wiederverwendet werden kann)
 3. Allen Anweisung in Abschnitt "VM erstellen" folgen
 
@@ -260,7 +268,7 @@ Für das weitere Vorgehen wird eine System-Abbild-Datei benötigt. Dazu laden wi
 1. VirtualBox starten
 2. Links oben, innerhalb der Anwendung, auf `Neu` klicken
 3. Im neuen Fenster folgende Informationen eintragen:
-   *  Name:           `M300_Ubuntu_16.04_Desktop`
+   *  Name:           `M300_Ubuntu_XX.04_Desktop`
    *  Typ:            `Linux`
    *  Version:        `Ubuntu (64-bit)`
    *  Speichergrösse: `2048 MB`
@@ -317,10 +325,9 @@ Nachfolgend sind einzelne Schritte zur Einrichtung von Vagrant dokumentiert:
 
 ### Software herunteladen & installieren
 ***
-1. Die Anwendung in der Version 2.1.4 kann auf der [offiziellen Webseite](https://www.vagrantup.com/ "vagrantup.com") heruntergeladen werden.
+1. Die Anwendung kann auf der [offiziellen Webseite](https://www.vagrantup.com/ "vagrantup.com") heruntergeladen werden.
 2. Die Installation erfolgt, wie alle anderen Anwendungen, GUI-basiert, jedoch standard (ohne speziellen Anpassungen). Daher wird an dieser Stelle ebenfalls auf eine Erklärung verzichtet.
 3. Sobald der Vorgang abgeschlossen wurde, kann mit dem Erstellen einer VM fortgefahren werden. 
-
 
 ### Virtuelle Maschine erstellen
 ***

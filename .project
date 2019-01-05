@@ -8,4 +8,17 @@
 	</buildSpec>
 	<natures>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>slides</name>
+			<type>2</type>
+			<locationURI>ONEDRIVE/TBZ/Module/M300-Services</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>ONEDRIVE</name>
+			<value>file:/D:/Daten/OneDrive/OneDrive%20-%20TBZ</value>
+		</variable>
+	</variableList>
 </projectDescription>
