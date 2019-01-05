@@ -4,7 +4,6 @@ Fragen
 ### Protokollieren & Überwachen
 ***
 
----
 Warum sollten Container überwacht werden?
 <details><summary>Antwort</summary>  
 	 Um Fehler oder grosse Ressourcenbelastungen frühzeitig zu erkennen und einzugreifen	

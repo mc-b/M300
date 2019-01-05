@@ -52,7 +52,6 @@ Wie bekomme ich Informationen zu einem laufenden Docker Container?
 ### Docker Hub
 ***
 
----
 Was ist der Unterschied zwischen der Verwendung der Docker Registry und `docker save` und `docker load`?
 <details><summary>Antwort</summary>
 	 	Registry ist in der Cloud und Images sind für alle sichtbar, save und load passiert lokal mit Dateien
