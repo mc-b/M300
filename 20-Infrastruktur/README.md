@@ -58,7 +58,7 @@ Diese Ebene ist dafür zuständig, containerisierten Workload auf den Ressourcen
 ### Dynamic Infrastructure Platforms
 ***
 
-Eine dynamische Infrastruktur-Plattform (Dynamic Infrastrucutre Platform) ist ein **System**, das Rechen-Ressourcen  virtualisiert und bereitstellt, insbesondere CPU (**compute**), Speicher (**storage**) und Netzwerke (**networks**). 
+Eine dynamische Infrastruktur-Plattform (Dynamic Infrastructure Platform) ist ein **System**, das Rechen-Ressourcen  virtualisiert und bereitstellt, insbesondere CPU (**compute**), Speicher (**storage**) und Netzwerke (**networks**). 
 Die Ressourcen werden programmgesteuert zugewiesen und verwaltet. Die Bereitstellung erfolgt mit virtuellen Maschinen (VM).
 
 Beispiele sind:
@@ -132,7 +132,7 @@ Folgende Arten von Tools werden für IaC benötigt:
 * **Server Configuration Tools**
     * Zur Bereitstellung und Konfiguration von Servern bzw. VMs (z.B. Vagrant, Packer, Docker)
 * **Package Management Tools**
-    * Zur Bereitstellung und Verteilung von vorkonfigierter Software, vergleichbar mit einem APP-Store. Bei Linux: APT, YUM, bei Windows: WiX, Plattformneutral: SBT native packager
+    * Zur Bereitstellung und Verteilung von vorkonfigurierter Software, vergleichbar mit einem APP-Store. Bei Linux: APT, YUM, bei Windows: WiX, Plattformneutral: SBT native packager
 * **Scripting Tools**
     * Kommandozeileninterpreter, kurz CLI (Command-Line Interpreter / Command-Line Shell), zur Schrittweisen Abarbeitung von Befehlen. Bei Linux, Mac und Windows 10: Bash, bei reinem Windows: PowerShell.
 * **Versionsverwaltung & Hubs**
@@ -192,7 +192,7 @@ Die gesamte Konfiguration erfolgt im Vagrantfile, das im entsprechenden Verzeich
 ```
 
 **Provisioning** <br>
-Provisioning bedeutet bei Vagrant, Anweisung an ein anderes Programm zu geben. In den meisten Fällen an eine Shell, wie Bash. Die nachfolgenden Zeile installieren den Web Server Apache.
+Provisioning bedeutet bei Vagrant, Anweisung an ein anderes Programm zu geben. In den meisten Fällen an eine Shell, wie Bash. Die nachfolgenden Zeilen installieren den Web Server Apache.
 ```Ruby
     config.vm.provision :shell, inline: <<-SHELL 
         sudo apt-get update
