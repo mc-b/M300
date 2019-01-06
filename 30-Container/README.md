@@ -68,7 +68,7 @@ Docker nahm die bestehende Linux-Containertechnologie auf und verpackte bzw. erw
 
 Die Docker-Plattform besteht vereinfacht gesagt aus zwei getrennten Komponenten: der **Docker Engine**, die für das Erstellen und Ausführen von Containern verantwortlich ist, sowie dem **Docker Hub**, einem Cloud Service, um Container-Images zu verteilen.
 
-Docker wurde für 64-bit Linux Systeme Entwickelt, kann jedoch auch mittels VirtualBox auf Mac und Windows betrieben werden.
+Docker wurde für 64-bit Linux Systeme entwickelt, kann jedoch auch mittels VirtualBox auf Mac und Windows betrieben werden.
 
 
 ### Microservices
@@ -97,7 +97,7 @@ Docker nahm die bestehende Linux-Containertechnologie auf und verpackte und erwe
 
 Die Docker-Plattform besteht vereinfacht gesagt aus zwei getrennten Komponenten: der Docker Engine, die für das Erstellen und Ausführen von Containern verantwortlich ist, sowie dem Docker Hub, einem Cloud Service, um Container-Images zu verteilen.
 
-**Wichtig:** Docker wurde für 64-bit Linux Systeme Entwickelt, kann jedoch auch mittels VirtualBox auf Mac und Windows betrieben werden.
+**Wichtig:** Docker wurde für 64-bit Linux Systeme entwickelt, kann jedoch auch mittels VirtualBox auf Mac und Windows betrieben werden.
 
 
 ### Architektur

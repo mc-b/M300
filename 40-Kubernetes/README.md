@@ -200,7 +200,7 @@ Die wichtigsten Konfigurationen:
 	worker:
 	  count: 2
 
-Es wird ein Master und zwei Worker Nodes erstellt. Der Master und die Worker Nodes werden während der Installation automatisch miteinnander gejoint.
+Es wird ein Master und zwei Worker Nodes erstellt. Der Master und die Worker Nodes werden während der Installation automatisch miteinander gejoint.
 
 	use_dhcp: false  
 	ip:
