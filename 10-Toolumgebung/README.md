@@ -131,14 +131,14 @@ Datei %HOME%/.ssh/id_rsa.pub oder $HOME/.ssh/id_rsa.pub in Zwischenablage kopier
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 Damit die Arbeiten lokal auf dem eigenen PC erfolgen können, muss der sogenannte "Git Client", auf Windows "Git/Bash" installiert werden. Dieser ermöglicht uns,
-Cloud-Repositories zu klonen, zu pullen (herunteraden) oder ein lokales Repository zu pushen (hochladen).
+Cloud-Repositories zu klonen, zu pullen (herunterladen) oder ein lokales Repository zu pushen (hochladen).
 
 Hierzu müssen folgende Schritte durchgeführt werden: 
 
 ### Client installieren
 ***
 1. Für die Client-Installation muss der Installer unter [dieser Webseite](https://git-scm.com/downloads) heruntergeladen werden 
-2. Die Installation erfolgt GUI-basiert, jedoch standard (ohne speziellen Anpassungen). Daher wird an dieser Stelle auf eine Erklärung verzichtet.
+2. Die Installation erfolgt GUI-basiert, jedoch Standard (ohne speziellen Anpassungen). Daher wird an dieser Stelle auf eine Erklärung verzichtet.
 3. Sobald der Vorgang abgeschlossen wurde, kann mit der Konfiguration fortgefahren werden.
 
 
@@ -250,7 +250,7 @@ Folgende Arbeiten müssen gemacht werden:
 ### Software herunterladen & installieren
 ***
 1. Zuerst muss die VirtualBox-Anwendung installiert werden. Der Installer lässt sich [hier](https://www.virtualbox.org"virtualbox.org") herunterladen.
-2. Die Installation erfolgt GUI-basiert, jedoch standard (ohne speziellen Anpassungen). Daher wird an dieser Stelle auf eine Erklärung verzichtet.
+2. Die Installation erfolgt GUI-basiert, jedoch Standard (ohne spezielle Anpassungen). Daher wird an dieser Stelle auf eine Erklärung verzichtet.
 3. Sobald der Vorgang abgeschlossen wurde, kann mit dem Herunterladen der ISO-Datei und der VM-Erstellung fortgefahren werden.
 
 ### ISO-Datei herunterladen
@@ -277,7 +277,7 @@ Für das weitere Vorgehen wird eine System-Abbild-Datei benötigt. Dazu laden wi
    *  Dateigrösse:                     `10.00 GB`
    *  Dateityp der Festplatte:         `VMDK (Virtual Maschine Disk)`
    *  Storage on physical hard disk:   `dynamisch alloziert`
-6. Ebenefalls auf `Erzeugen` klicken, dann im Hauptmenü die VM anwählen (blau markiert) und den Punkt `Ändern` aufrufen
+6. Ebenfalls auf `Erzeugen` klicken, dann im Hauptmenü die VM anwählen (blau markiert) und den Punkt `Ändern` aufrufen
 7. Im Abschnitt `Massenspeicher` den SATA-Controller anwählen und auf das CD+Symbol klicken
 8. Unter `Medium auswählen` das zuvor heruntergeladene Systemabbild (ISO-Datei) anwählen
 9. Alle Änderungen speichern und die VM starten
@@ -291,7 +291,7 @@ Die virtuelle Maschine (VM) sollte nun soweit betriebsbereit sein, sprich der Zu
 2. Anmelden und Terminal öffnen
 3. Paketliste neu einlesen und Pakete aktualisieren:
    ```Shell 
-   $  sudo apt-get update   #Paketlisten des Paketmanagement-Systems "APT" neu einlesem
+   $  sudo apt-get update   #Paketlisten des Paketmanagement-Systems "APT" neu einlesen
    
    $  sudo apt-get update   #Installierte Pakete wenn möglich auf verbesserte Versionen aktualisieren
 
@@ -321,10 +321,10 @@ Abhilfe bietet hier Vagrant. Vagrant ist eine freie Ruby-Anwendung zur Erstellun
 
 Nachfolgend sind einzelne Schritte zur Einrichtung von Vagrant dokumentiert:
 
-### Software herunteladen & installieren
+### Software herunterladen & installieren
 ***
 1. Die Anwendung kann auf der [offiziellen Webseite](https://www.vagrantup.com/ "vagrantup.com") heruntergeladen werden.
-2. Die Installation erfolgt, wie alle anderen Anwendungen, GUI-basiert, jedoch standard (ohne speziellen Anpassungen). Daher wird an dieser Stelle ebenfalls auf eine Erklärung verzichtet.
+2. Die Installation erfolgt, wie alle anderen Anwendungen, GUI-basiert, jedoch Standard (ohne spezielle Anpassungen). Daher wird an dieser Stelle ebenfalls auf eine Erklärung verzichtet.
 3. Sobald der Vorgang abgeschlossen wurde, kann mit dem Erstellen einer VM fortgefahren werden. 
 
 ### Virtuelle Maschine erstellen
@@ -421,11 +421,11 @@ Dieser freie Quelltext-Editor von Microsoft, ermöglicht uns, unsere Workflows b
 
 Für die Einrichtung muss man sich nach den nachfolgenden Anweisungen orientieren:
 
-### Software herunteladen & installieren
+### Software herunterladen & installieren
 ***
 1. Unter [dieser Webseite](https://code.visualstudio.com/"visualstudio.com") lässt sich der Installer (Version 1.26.1) herunterladen.
-2. Auf "Download for Mac" klicken und warten, bis das Fenster zum Herunterladen erscheint. Anschliesend den Download des Installers starten
-3. Die Installation erfolgt auch hier GUI-basiert. Wiederum aber standard (ohne speziellen Anpassungen), sodass an dieser Stelle auf eine Erklärung ebenfalls verzichtet wird .
+2. Auf "Download for Mac" klicken und warten, bis das Fenster zum Herunterladen erscheint. Anschliessend den Download des Installers starten
+3. Die Installation erfolgt auch hier GUI-basiert. Wiederum aber Standard (ohne spezielle Anpassungen), sodass an dieser Stelle auf eine Erklärung ebenfalls verzichtet wird.
 4. Sobald der Vorgang abgeschlossen wurde, kann mit dem Herunterladen der ISO-Datei und der VM-Erstellung fortgefahren werden.
 
 
@@ -434,14 +434,14 @@ Für die Einrichtung muss man sich nach den nachfolgenden Anweisungen orientiere
 
 Wir fügen dem Editor drei wichtige Extensions hinzu:
 
-* Markdown All in One (Version 1.6.0 / von Yu Zhang)
-* Vagrant Extension (Version 0.5.0 / von Marco Stanzi)
-* vscode-pdf Extension (Version 0.3.0 / von tomiko1207)
+* Markdown All in One (von Yu Zhang)
+* Vagrant Extension (von Marco Stanzi)
+* vscode-pdf Extension (von tomiko1207)
 
 Dazu müssen folgende Anweisungen befolgt werden: 
 
 1. Visual Studio Code öffnen
-2. Die Tastenkombination `CTRL` + `SHIFT` + `X` drücken und in der Sucheleiste die erwähnten Extensions suchen
+2. Die Tastenkombination `CTRL` + `SHIFT` + `X` drücken und in der Suchleiste die erwähnten Extensions suchen
 3. Auf `Install` klicken und anschliessend auf `Reload`, um die Extension in den Arbeitsbereich zu laden.
 4. Nun können die Extensions angewendet werden. Für Markdown ist [diese Liste](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet/"github.com") sehr hilfreich.
 
