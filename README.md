@@ -27,6 +27,8 @@ Sie können Dienste (engl. Services) plattformübergreifend in einem Netzwerk vo
 * [Infrastruktur (vagrant)](vagrant/)
 * [Container (docker)](docker/)
 
-#### Danksagung
+#### Allgemeine Hinweise
 
-Formatierungen und Icons von [Michael Blickenstorfer](https://github.com/TacoNaco47/M300), Besten Dank!
+* Die Inhalte sind auf das Modul [300 Plattformübergreifende Dienste in ein Netzwerk integrieren](https://cf.ict-berufsbildung.ch/modules.php?name=Mbk&a=20101&cmodnr=300&noheader=1) zugeschnitten.
+* Die Original Inhalte basieren auf dem Projekt [devops](https://github.com/mc-b/devops).
+* Formatierungen und Icons von [Michael Blickenstorfer](https://github.com/TacoNaco47/M300), Besten Dank!
