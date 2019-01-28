@@ -1,4 +1,4 @@
-M300 - 40 Container 
+M300 - 30 Container 
 ===================
 
 Diese Wikiseite zeigt auf wie Applikationen und Services, als Container (Containerisiert) betrieben werden können.
