@@ -397,7 +397,7 @@ Nachfolgend wird die VM mit einem bereits abgeänderten File bzw. VM aus dem M30
 1. Terminal öffnen
 2. In das M300-Verzeichnis (\M300\vagrant\web) wechseln:
     ```Shell
-      $ cd Pfad\zum\dvops-Verzeichnis\M300\vagrant\web
+      $ cd Pfad/zum-M300-Verzeichnis/vagrant/web
     ``` 
 3. VM erstellen und starten:
     ```Shell
