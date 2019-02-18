@@ -207,7 +207,7 @@ Hierzu müssen folgende Schritte durchgeführt werden:
     ```  
 3.  Dateien dem Upload hinzufügen:
     ```Shell
-      $ git add -a.
+      $ git add -A .
     ``` 
 4.  Den Upload commiten:
     ```Shell
@@ -230,7 +230,7 @@ Wichtig: Die Befehle müssen innerhalb des lokalen Repositorys ausgeführt werde
 $  cd Pfad\zu\meinem\Repository    # Zum lokalen GitHub-Repository wechseln
 
 $  git status                      # Geänderte Datei(en) werden rot aufgelistet
-$  git add -a                      # Fügt alle Dateien zum "Upload" hinzu
+$  git add -A                      # Fügt alle Dateien zum "Upload" hinzu
 $  git status                      # Der Status ist nun grün > Dateien sind Upload-bereit (Optional) 
 $  git commit -m "Mein Kommentar"  # Upload wird "commited" > Kommentar zu Dokumentationszwecken ist dafür notwendig
 $  git status                      # Dateien werden nun als "zum Pushen bereit" angezeigt
