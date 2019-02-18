@@ -338,6 +338,7 @@ Nachfolgend sind einzelne Schritte zur Einrichtung von Vagrant dokumentiert:
     ``` 
 3. Vagrantfile erzeugen, VM erstellen und entsprechend starten:
     ```Shell
+      $ vagrant box add http://10.1.66.11/vagrant/ubuntu/xenial64.box --name ubuntu/xenial64  #Vagrant-Box vom Netzwerkshare hinzufügen
       $ vagrant init ubuntu/xenial64        #Vagrantfile erzeugen
       $ vagrant up --provider virtualbox    #Virtuelle Maschine erstellen & starten
     ``` 
@@ -368,7 +369,7 @@ Schlussfolgerung: Eine VM lässt sich mit Vagrant eindeutig schneller und unkomp
     ``` 
 3. Vagrantfile erzeugen, VM erstellen und entsprechend starten:
     ```Shell
-      $ vagrant box add http://[HOST]/vagrant/ubuntu/xenial64.box --name ubuntu/xenial64  #Vagrant-Box vom Netzwerkshare hinzufügen
+      $ vagrant box add http://10.1.66.11/vagrant/ubuntu/xenial64.box --name ubuntu/xenial64  #Vagrant-Box vom Netzwerkshare hinzufügen, falls nicht vorhanden
       $ vagrant init ubuntu/xenial64                                                      #Vagrantfile erzeugen
       $ vagrant up --provider virtualbox                                                  #Virtuelle Maschine erstellen & starten
     ``` 
