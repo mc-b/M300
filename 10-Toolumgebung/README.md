@@ -293,7 +293,7 @@ Die virtuelle Maschine (VM) sollte nun soweit betriebsbereit sein, sprich der Zu
    ```Shell 
    $  sudo apt-get update   #Paketlisten des Paketmanagement-Systems "APT" neu einlesen
    
-   $  sudo apt-get update   #Installierte Pakete wenn möglich auf verbesserte Versionen aktualisieren
+   $  sudo apt-get upgrade   #Installierte Pakete wenn möglich auf verbesserte Versionen aktualisieren
 
    $  sudo reboot           #System-Neustart durchführen
    ```
@@ -452,7 +452,7 @@ Dazu müssen folgende Anweisungen befolgt werden:
 Damit keine Dateien der virtuellen Maschinen dem Cloud-Repository hinzugefügt werden (da Dateien zu gross), müssen diese in den Einstellungen "exkludiert" werden:
 
 1. Visual Studio Code öffnen
-2. Unter `Code` > `Preferences` > `Settings` bei den 3 Punkten (...) auf `Open setting.json` klicken
+2. Unter `File` > `Preferences` > `Settings` ('Ctrl' + ',') auf `Open setting.json` klicken
 3. Zu diesem Abschnitt gehen:
      ```
       // Configure glob patterns for excluding files and folders. For example, the files 
