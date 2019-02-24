@@ -333,9 +333,9 @@ Sind Bestandteile von Packer, die das Ergebnis eines Builders oder eines anderen
 
 ### Installation
 ***
-1. Packer 1.3.1 herunterladen von: https://www.packer.io/
+1. Packer 1.3.1 herunterladen von: https://www.pac64 oder er.io/
     * Auf Button `DOWNLOAD 1.3.1` klicken
-    * macOS 64-Bit anwählen
+    * Windows 64 oder macOS 64-Bit anwählen
     * Warten, bis Datei heruntergeladen wurde
 2. Heruntergeladene Datei `packer_1.3.1_darwin_amd64.zip` entpacken
 3. Terminal öffnen & Ordner erstellen:
