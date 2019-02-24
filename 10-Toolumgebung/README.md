@@ -187,7 +187,7 @@ Hierzu müssen folgende Schritte durchgeführt werden:
     ``` 
 3. Repository mit SSH klonen (siehe Webseite des Repositorys unter "Clone or download"):
     ```Shell
-      $ git clone git@github.com:<Ihr Name>/M300.git
+      $ git clone git@github.com:<Ihr Name>/my_M300.git
 
       Cloning into 'M300'...
     ``` 
