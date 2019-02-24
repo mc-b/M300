@@ -189,7 +189,7 @@ Hierzu müssen folgende Schritte durchgeführt werden:
     ```Shell
       $ git clone git@github.com:<Ihr Name>/my_M300.git
 
-      Cloning into 'M300'...
+      Cloning into 'my_M300'...
     ``` 
 4. Repository aktualisieren und Status anzeigen:
     ```Shell
