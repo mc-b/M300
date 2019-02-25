@@ -21,7 +21,7 @@ Sie können eine Dynamischen Infrastruktur-Plattform (Private Cloud) einrichten,
 * 06 - [Reflexion](#-06---reflexion)
 * 07 - [Fragen](Fragen.md)
 * 08 - [Quellenverzeichnis](#-08---quellenverzeichnis)
-* 09 - [Beispiele (für LB2)](#-09---beispiele)
+* 09 - [Beispiele (für LB2)](#-09---beispiele-für-lb2)
 
 ___
 
@@ -382,7 +382,7 @@ Sind Bestandteile von Packer, die das Ergebnis eines Builders oder eines anderen
         validate    check that a template is valid
         version     Prints the Packer version
 ```
-7. Terminal (Bash) wieder schliessen & mit dieser Dokumentation fortfahren ...
+7. Terminal (*Bash*) wieder schliessen & mit dieser Dokumentation fortfahren ...
    
 ### Image erstellen
 ***
@@ -719,7 +719,7 @@ muss die Plattform via Programmierschnittstelle ([API](https://de.wikipedia.org/
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
-1.  Terminal (Bash) öffnen
+1.  Terminal (*Bash*) öffnen
 2.  In das entsprechend Verzeichnis z.B. `cd M300/vagrant/web` wechseln. `README.md` studieren, z.B. mittels `less README.md`.
 
 * [web - Einfacher Webserver](../vagrant/web/)

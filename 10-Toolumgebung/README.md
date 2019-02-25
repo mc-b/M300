@@ -54,7 +54,7 @@ Folgende Arbeiten müssen gemacht werden:
 
 **ACHTUNG**: Auf Windows muss zuerst [Git/Bash](#--02---git-client) installiert werden. Anschliessend können die Befehle in der Git/Bash ausgeführt werden.
 
-1.  Terminal (Bash) öffnen
+1.  Terminal (*Bash*) öffnen
 2.  Folgenden Befehl mit der Account-E-Mail von GitHub einfügen:
     ```Shell
       $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
@@ -82,7 +82,7 @@ Datei %HOME%/.ssh/id_rsa.pub oder $HOME/.ssh/id_rsa.pub in Zwischenablage kopier
 
 **macOS**
 
-1.  Terminal (Bash) öffnen
+1.  Terminal (*Bash*) öffnen
 2.  SSH-Agent starten:
     ```Shell
       $ eval "$(ssh-agent -s)"
@@ -144,7 +144,7 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 
 ### Client konfigurieren
 ***
-1. Terminal (Bash) öffnen
+1. Terminal (*Bash*) öffnen
 2. Git konfigurieren mit Informationen des GitHub-Accounts:
     ```Shell
       $ git config --global user.name "<username>"
@@ -156,7 +156,7 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 ### Repository klonen
 ***
 1. Zu Testzwecken soll ein Repository geklont werden. Dazu sind folgende Befehle notwendig:
-2. Terminal (Bash) öffnen
+2. Terminal (*Bash*) öffnen
 3. Repository klonen: 
     ```Shell
       $ git clone https://github.com/mc-b/M300
@@ -179,7 +179,7 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 
 ### Repository herunterladen & aktualisieren (clone/pull)
 ***
-1. Terminal (Bash) öffnen
+1. Terminal (*Bash*) öffnen
 2. Ordner für Repository im gewünschten Verzeichnis erstellen:
     ```Shell
       $ cd Wohin\auch\immer
@@ -200,7 +200,7 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 
 ### Repository hochladen (Push)
 ***
-1.  Terminal (Bash) öffnen (nachdem Teile bzw. Dateien des lokalen Repositorys geändert wurden)
+1.  Terminal (*Bash*) öffnen (nachdem Teile bzw. Dateien des lokalen Repositorys geändert wurden)
 2.  In das entsprechende Verzeichnis des Repository gehen: 
     ```Shell
       $ cd Pfad\zu\meinem\Repository  
@@ -288,7 +288,7 @@ Für das weitere Vorgehen wird eine System-Abbild-Datei benötigt. Dazu laden wi
 Die virtuelle Maschine (VM) sollte nun soweit betriebsbereit sein, sprich der Zugriff auf den Home-Desktop ist möglich. 
 
 1. Ubuntu-VM starten
-2. Anmelden und Terminal (Bash) öffnen
+2. Anmelden und Terminal (*Bash*) öffnen
 3. Paketliste neu einlesen und Pakete aktualisieren:
    ```Shell 
    $  sudo apt-get update   #Paketlisten des Paketmanagement-Systems "APT" neu einlesen
@@ -329,7 +329,7 @@ Nachfolgend sind einzelne Schritte zur Einrichtung von Vagrant dokumentiert:
 
 ### Virtuelle Maschine erstellen
 ***
-1. Terminal (Bash) öffnen
+1. Terminal (*Bash*) öffnen
 2. In gewünschtem Verzeichnis einen neuen Ordner für die VM anlegen:
     ```Shell
       $ cd Wohin\auch\immer
@@ -360,7 +360,7 @@ Schlussfolgerung: Eine VM lässt sich mit Vagrant eindeutig schneller und unkomp
 
 ### Virtuelle Maschine erstellen (mit Vagrant-Box auf Netzwerkshare)
 ***
-1. Terminal (Bash) öffnen
+1. Terminal (*Bash*) öffnen
 2. In gewünschtem Verzeichnis einen neuen Ordner für die VM anlegen:
     ```Shell
       $ cd Wohin\auch\immer
@@ -394,7 +394,7 @@ Um den Automatisierungsgrad von Vagrant im Rahmen dieser Dokumentation etwas bes
 
 Nachfolgend wird die VM mit einem bereits abgeänderten File bzw. VM aus dem M300-Repository erstellt:
 
-1. Terminal (Bash) öffnen
+1. Terminal (*Bash*) öffnen
 2. In das M300-Verzeichnis (\M300\vagrant\web) wechseln:
     ```Shell
       $ cd Pfad/zum-M300-Verzeichnis/vagrant/web
