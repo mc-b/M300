@@ -338,7 +338,7 @@ Sind Bestandteile von Packer, die das Ergebnis eines Builders oder eines anderen
     * Windows 64 oder macOS 64-Bit anwählen
     * Warten, bis Datei heruntergeladen wurde
 2. Heruntergeladene Datei `packer_....zip` entpacken
-3. Terminal öffnen & Ordner erstellen:
+3. Terminal (Bash) öffnen & Ordner erstellen:
 ```Shell
     $ sudo mkdir ~/packer
     $ cd ~/packer 
@@ -368,7 +368,7 @@ Sind Bestandteile von Packer, die das Ergebnis eines Builders oder eines anderen
         validate    check that a template is valid
         version     Prints the Packer version
 ```
-7. Terminal wieder schliessen & mit dieser Dokumentation fortfahren ...
+7. Terminal (Bash) wieder schliessen & mit dieser Dokumentation fortfahren ...
    
 ### Image erstellen
 ***
