@@ -21,7 +21,7 @@ Sie können eine Dynamischen Infrastruktur-Plattform (Private Cloud) einrichten,
 * 06 - [Reflexion](#-06---reflexion)
 * 07 - [Fragen](Fragen.md)
 * 08 - [Quellenverzeichnis](#-08---quellenverzeichnis)
-* 09 - [Beispiele](#-09---beispiele)
+* 09 - [Beispiele (für LB2)](#-09---beispiele)
 
 ___
 
@@ -338,7 +338,7 @@ Sind Bestandteile von Packer, die das Ergebnis eines Builders oder eines anderen
     * Windows 64 oder macOS 64-Bit anwählen
     * Warten, bis Datei heruntergeladen wurde
 2. Heruntergeladene Datei `packer_....zip` entpacken
-3. Terminal (Bash) öffnen & Ordner erstellen:
+3. Terminal (*Bash*) öffnen & Ordner erstellen:
 ```Shell
     $ sudo mkdir ~/packer
     $ cd ~/packer 
@@ -355,6 +355,20 @@ Sind Bestandteile von Packer, die das Ergebnis eines Builders oder eines anderen
 ```Shell
     $ export PATH="$PATH:/Users[Dein-Benutzername]/packer"
 ```
+
+> #### Änderung und anzeigen der Umgebungsvariablen
+>
+> Umgebungsvariablen können folgendermassen gesetzt und den anderen Prozessen innerhalb des Betriebssystems bekannt gemacht werden:
+>
+> Setzen der Variable: <Variablenname>=<Variableninhalt>
+> Bekanntmachen der Variable: export <Variablenname>
+> Löschen der Variable: unset <Variablenname>
+> Abfrage der Variable: env
+>
+> Weitere Informationen zu Umgebungsvariablen:   
+> https://de.wikipedia.org/wiki/Umgebungsvariable#%C3%84nderung_der_Umgebungsvariablen
+>
+
 6. Funktion von Packer testen:
 ```Shell
     $ packer
@@ -700,7 +714,7 @@ muss die Plattform via Programmierschnittstelle ([API](https://de.wikipedia.org/
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
-![](../images/Samples_36x36.png "Vagrant") 09 - Beispiele
+![](../images/Samples_36x36.png "Vagrant") 09 - Beispiele (für LB2)
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
