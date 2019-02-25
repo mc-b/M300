@@ -266,7 +266,7 @@ Z.B. das HTML-Verzeichnis des Apache-Webservers mit dem Host-Verzeichnis synchro
 
 **Wichtig:** Standardmässig wird das aktuelle Vagrantfile-Verzeichnis in der VM unter /vagrant gemountet.
 
-
+Weiter geht es mit den [Beispielen](#-09---beispiele)
 
 ![](../images/Packer_36x36.png "Packer") 04 - Packer
 ======
@@ -704,6 +704,9 @@ muss die Plattform via Programmierschnittstelle ([API](https://de.wikipedia.org/
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
+
+1.  Terminal (Bash) öffnen
+2.  In das entsprechend Verzeichnis z.B. `cd M300/vagrant/web` wechseln. `README.md` studieren, z.B. mittels `less README.md`.
 
 * [web - Einfacher Webserver](../vagrant/web/)
 * [db - MySQL mit UserInterface](../vagrant/db/)
