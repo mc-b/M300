@@ -31,12 +31,12 @@ Anschliessend suchen wir uns die Serverdienste aus, welche wir automatisieren wo
 
 Wir haben uns für [Webanalyzer](https://wiki.ubuntuusers.de/Webalizer/) entschieden, dazu braucht es jedoch auch den [Apache](https://wiki.ubuntuusers.de/Apache_2.4/) Webserver.
 
-Zuerst müssen immer die Paketquellen von Ubuntu aktualsiert werden, dies erfolgt als Superuser (Linux = root, Windows = Administrator)
+Zuerst müssen immer die Paketquellen von Ubuntu aktualisiert werden, dies erfolgt als Superuser (Linux = root, Windows = Administrator)
 
 	sudo apt-get update
 	
 	
-Dann folgt die Installation von [Apache](https://wiki.ubuntuusers.de/Apache_2.4/). Dabei darf das Argument `-y` nicht vergessen werden, ansonsten bleibt der Installationsbefehl stehen und verlangt vom User eine manuelle Eingabe. Wir Automatisieren, darum sind manuelle Eingaben nicht möglich.
+Dann folgt die Installation von [Apache](https://wiki.ubuntuusers.de/Apache_2.4/). Dabei darf das Argument `-y` nicht vergessen werden, ansonsten bleibt der Installationsbefehl stehen und verlangt vom User eine manuelle Eingabe.
 
 	sudo apt-get install -y apache2
 	
@@ -52,7 +52,7 @@ Wenn alles läuft, schauen wir uns mit `history` die gemachten Eingaben an und k
 #### Probleme
 
 * Dateien sind nach dem Zerstören der VM nicht mehr vorhanden
-* Port vom Webserver wird nicht weitergeleitet an Host
+* Port vom Webserver, in der VM, wird nicht weitergeleitet an Host. 
 * Es existiert keine index.html unter `/var/www/webalizer/index.html`. Siehe **Hinweis** bei [Verwendung](https://wiki.ubuntuusers.de/Webalizer/#Verwendung)
 * Der URL (z.B. via `curl http://localhost/webalizer`) von Webanalyzer kann nicht abgerufen werden
 
@@ -63,7 +63,7 @@ Wenn alles läuft, schauen wir uns mit `history` die gemachten Eingaben an und k
 
 **Um einen Output zu Erzeugen sind mehrere Aktionen nötig:**
 
-Erzeugung von Trafic z.B. mittels `curl http://localhost/`
+Erzeugung von Trafic z.B. mittels `curl http://localhost/` (*PowerShell: Invoke-WebRequest*)
     
     curl http://localhost/ >/dev/null 2>&1
 	curl http://localhost/ >/dev/null 2>&1
@@ -71,13 +71,17 @@ Erzeugung von Trafic z.B. mittels `curl http://localhost/`
 	curl http://localhost/ >/dev/null 2>&1
 	curl http://localhost/bad >/dev/null 2>&1    
     
-Rotieren des Access Logs von Apache, weil Webanalyzer nur Archivdaten auswertet.
+Rotieren des Access Logs von Apache, weil Webanalyzer nur Archivdaten auswertet. Siehe **Hinweis** bei [Verwendung](https://wiki.ubuntuusers.de/Webalizer/#Verwendung)
 
 	sudo logrotate -f /etc/logrotate.d/apache2    
     
 Korrektur des Output Verzeichnisses in `/etc/webalizer/webalizer.conf` 
 
 	sudo sed -i -e"s:/var/www/webalizer:/var/www/html/webalizer:" /etc/webalizer/webalizer.conf 
+	
+Manuelle Erzeugung des Webanalyzer Ausgaben
+
+	sudo /etc/cron.daily/webalizer 
 	
 Das komplette `Vagrantfile` sieht dann so aus:
 
@@ -114,8 +118,8 @@ Das komplette `Vagrantfile` sieht dann so aus:
 ### Sicherheit
 ***
 
-Die VW kann zusätzlich mit einer Firewall abgesichert werden.
+Die VW sollte zusätzlich mit einer Firewall abgesichert werden.
 
-Es könnten mehrere VMs wie die obige erstellt werden und diese zusätzlich mit einen Reverse Proxy abgesichert werden.
+Ist die VM Teil mehrerer VMs bzw. Webservers, können diese mittels eines Reverse Proxies zu einem zusammengefasst werden (braucht nur ein SSL-Zertifikat).
 
 Ein Beispiel dazu findet man unter [fwrp](../vagrant/fwrp)
