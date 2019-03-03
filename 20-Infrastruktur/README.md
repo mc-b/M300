@@ -22,6 +22,7 @@ Sie können eine Dynamischen Infrastruktur-Plattform (Private Cloud) einrichten,
 * 07 - [Fragen](Fragen.md)
 * 08 - [Quellenverzeichnis](#-08---quellenverzeichnis)
 * 09 - [Beispiele (für LB2)](#-09---beispiele-für-lb2)
+* 10 - [Mögliche Serverdienste für die Automatisierung](https://wiki.ubuntuusers.de/Serverdienste/)
 
 ___
 

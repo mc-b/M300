@@ -20,7 +20,7 @@ Sie können Applikationen und Services als Container betrieben und als Container
 * 05 - [Image-Bereitstellung](#-05---image-bereitstellung)
 * 06 - [Reflexion](#-06---reflexion)
 * 07 - [Fragen](Fragen.md)
-* 08 - [LB 2 hands-on](LB2.md)
+* 08 - [LB 3 hands-on](LB3.md)
 * 09 - [Quellenverzeichnis](#-09---quellenverzeichnis)
 
 ___

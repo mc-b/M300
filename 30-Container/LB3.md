@@ -1,7 +1,7 @@
-LB 2 hands-on
+LB 3 hands-on
 =============
 
-### Umgebung funktionsfähig auf eigenem Notebook (Note 4.0)
+### Umgebung funktionsfähig auf eigenem Notebook 
 ***
 
 Eine Docker Umgebung muss funktionsfähig auf dem eigenen Notebook installiert sein.
@@ -15,7 +15,7 @@ Das kann z.B. mittels den [github](https://github.com/mc-b/M300)-Beispielen mit 
 	
 Alternative ist eine Native Installation von Docker mittels des Installationsprogrammes von [docker.com](https://www.docker.com/community-edition)
 	
-### Bestehende Docker Container kombinieren oder Container als Backend, Desktop App als Frontend (Note 4.5)
+### Bestehende Docker Container kombinieren oder Container als Backend, Desktop App als Frontend 
 ***
 
 Es soll ein Backend, z.B. in Form einer Datenbank, und ein Frontend, z.B. eine Web Applikation, miteinnander kombiniert werden.
@@ -57,7 +57,7 @@ Wenn alles übereinstimmt, diese wieder ins `Vagrantfile` ablegen.
 	   d.run "ghost", image: "ghost:1-alpine", args: "--link ghost_mysql:mysql -e database__client=mysql -e database__connection__host=ghost_mysql -e database__connection__user=ghost -e database__connection__password=secret -e database__connection__database=ghost -p 2368:2368 --restart=always"
 	  end
 
-### Eigene Container erstellen (Note 5.0 – 5.5)
+### Eigene Container erstellen
 ***
 
 Es soll ein eigener Docker Container erstellt werden. Dazu muss zuerst ein Dockerfile und aus diesem ein Docker Image erstellt werden.
