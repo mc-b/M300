@@ -122,4 +122,4 @@ Die VW sollte zusätzlich mit einer Firewall abgesichert werden.
 
 Ist die VM Teil mehrerer VMs bzw. Webservers, können diese mittels eines Reverse Proxies zu einem zusammengefasst werden (braucht nur ein SSL-Zertifikat).
 
-Ein Beispiel dazu findet man unter [fwrp](../vagrant/fwrp)
+Ein Beispiel dazu findet man unter [fwrp](../vagrant/fwrp) und die Beschreibung unter [25 Infrastruktur-Sicherheit](../25-Sicherheit/).
