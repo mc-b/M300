@@ -9,7 +9,7 @@ Die nachstehende Dokumentation zeigt alle Schritte auf, die es zur Einrichtung e
 
 #### Voraussetzungen
 
-* PC mit min. 8 GB freiem RAM und ca. 20 GB freiem HD.
+* PC/Notebook mit min. 8 GB freiem RAM, ca. 20 GB freiem HD-Speicher und einer Ethernet-Netzwerkkarte.
 * Einfache [Linux und Apache Web Server](../80-Ergaenzungen/) Kenntnisse sind von Vorteil.
 * Ein schneller Netzwerk- (Kabel!) und Internet-Anschluss
 
