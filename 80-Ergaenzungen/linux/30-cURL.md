@@ -3,6 +3,8 @@ REST Client: cURL
 
 [cURL (ausgeschrieben Client for URLs oder Curl URL Request Library)](https://de.wikipedia.org/wiki/CURL) ist ein Kommandozeilen-Programm zum Übertragen von Dateien in Rechnernetzen. Das Programm cURL steht unter der offenen MIT-Lizenz und ist auf verschiedene Betriebssysteme portiert worden. Es ist Bestandteil der meisten Linux-Distributionen und auch von Mac OS X. Die zugehörige Programmbibliothek libcurl wird von zahlreichen Programmen und Programmiersprachen verwendet.
 
+Unter Windows PowerShell gibt es einen Vergleichbaren Befehl [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest).
+
 ### Testen von aktiven Ports oder Services mittels cURL
 
 cURL wird auch sehr oft zum Testen von aktiven Ports oder Services benützt. Dazu eigenet sich am Besten die `-f` (HTTP) Fail silently (no output at all) Option.
