@@ -61,6 +61,7 @@ Das Linux Containers Project (LXC) wurde 2008 initiiert, und in ihm wurden (unte
 
 2013 lieferte Docker schliesslich die fehlenden Teile für das Containerisierungspuzzle, und die Technologie begann den Mainstream zu erreichen.
 
+Siehe auch [The Missing Introduction To Containerization](https://medium.com/devopslinks/the-missing-introduction-to-containerization-de1fbb73efc5)
 
 ### Docker
 ***
