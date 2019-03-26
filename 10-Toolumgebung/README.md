@@ -485,13 +485,25 @@ Nun sollten keine Dateien mit den Endungen .git / .svn / .hg / .vagrant / .DS_st
 7. Warten, bis Dateien vollständig gepusht wurden
 
 ***
-### Alternativer Editor
+### Alternative Editoren
+
+#### Atom IO
+
 https://atom.io/  
 Atom ist ein Open-Source-Texteditor, der als integrierte Entwicklungsumgebung für eine grosse Auswahl an Programmiersprachen verwendet werden kann, der dank des durchgehenden Supports der Git-Community viele Möglichkeiten eröffnet.
 
 Alle Features eines guten Editors sind enthalten, wie Syntax-Highlighter, automatische Erkennung von Sprachen, automatische Textvervollständigung, die Möglichkeit mehrere Panels zu verwenden und Projekte in verschiedenen Ordnern zu sichern, Support für Snippets und eine leistungsstarke Suche. Der grösste Vorteil ist die Modularität der Umgebung (Features können durch  zusätzliche Pakete hinzugefügt werden). Es inkludiert auch ein Steuersystem für Git, mit dem der Inhalte über die GitHub-Plattform veröffentlicht wird.
 
 Atom ist für mehrere Plattformen (Windows, Linux und Mac) ausgelegt. Die IDE besticht mit ihren Anpassungsoptionen: Beim Schreiben stehen einem mehr als 2.000 Pakete und 600 Themes zur Verfügung. Mit der grossen Menge an Anpassungen und Features ist sie sicherlich eines der besten Entwicklertools am Markt. Sie verbraucht ausserdem nur wenig Speicherplatz auf dem Computer im Vergleich zu ähnlichen Alternativen. 
+***
+
+#### StackEdit
+
+StackEdit ist ein Markdown Editor im Browser.
+
+* [https://stackedit.io/](https://stackedit.io/)
+
+
 ***
 
 ![](../images/Magnifier_36x36.png "Quellenverzeichnis") 06 - Quellenverzeichnis
