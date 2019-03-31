@@ -101,8 +101,6 @@ Die Docker-Plattform besteht vereinfacht gesagt aus zwei getrennten Komponenten:
 ### Architektur
 ***
 
-![](http://iotkit.mc-b.ch/tbz/M300V3/html/40-Container/images/DockerArchitektur.png  "Docker Architektur") 
-
 Nachfolgend sind die wichtigsten Komponenten von Docker aufgelistet:
 
 **Docker Deamon** <br>
