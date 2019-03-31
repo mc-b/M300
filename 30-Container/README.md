@@ -806,9 +806,11 @@ Anschliessend können die vorhanden Images von unserer lokalen Docker Registry g
 1.  Terminal (*Bash*) öffnen
 2.  [VM (beinhaltet Docker)](../docker/) erstellen und darin wechseln
 
+
 	cd M300/docker
 	vagrant up
 	vagrant ssh
+
 
 3.  In der VM ins Verzeichnis `/vagrant<Beispiel>` wechseln und `README.md` studieren, z.B. mittels `less README.md`.
 
