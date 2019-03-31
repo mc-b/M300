@@ -722,7 +722,7 @@ muss die Plattform via Programmierschnittstelle ([API](https://de.wikipedia.org/
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 1.  Terminal (*Bash*) öffnen
-2.  In das entsprechend Verzeichnis z.B. `cd M300/vagrant/web` wechseln. `README.md` studieren, z.B. mittels `less README.md`.
+2.  In das entsprechende Verzeichnis z.B. `cd M300/vagrant/web` wechseln. `README.md` studieren, z.B. mittels `less README.md`.
 
 * [web - Einfacher Webserver](../vagrant/web/)
 * [db - MySQL mit UserInterface](../vagrant/db/)
