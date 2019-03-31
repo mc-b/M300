@@ -63,15 +63,6 @@ Das Linux Containers Project (LXC) wurde 2008 initiiert, und in ihm wurden (unte
 
 Siehe auch [The Missing Introduction To Containerization](https://medium.com/devopslinks/the-missing-introduction-to-containerization-de1fbb73efc5)
 
-### Docker
-***
-Docker nahm die bestehende Linux-Containertechnologie auf und verpackte bzw. erweiterte sie in vielerlei Hinsicht – vor allem durch portable Images und eine benutzerfreundliche Schnittstelle –, um eine vollständige Lösung für das Erstellen und Verteilen von Containern zu schaffen.
-
-Die Docker-Plattform besteht vereinfacht gesagt aus zwei getrennten Komponenten: der **Docker Engine**, die für das Erstellen und Ausführen von Containern verantwortlich ist, sowie dem **Docker Hub**, einem Cloud Service, um Container-Images zu verteilen.
-
-Docker wurde für 64-bit Linux Systeme entwickelt, kann jedoch auch mittels VirtualBox auf Mac und Windows betrieben werden.
-
-
 ### Microservices
 ***
 
@@ -93,6 +84,12 @@ In einer Microservices-Architektur ist es möglich, nur die Ressourcen zu skalie
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
+
+[![](https://img.youtube.com/vi/YFl2mCHdv24/0.jpg)](https://www.youtube.com/watch?v=YFl2mCHdv24)
+
+Docker YouTube Einführung
+
+---
 
 Docker nahm die bestehende Linux-Containertechnologie auf und verpackte und erweiterte sie in vielerlei Hinsicht – vor allem durch portable Images und eine benutzerfreundliche Schnittstelle –, um eine vollständige Lösung für das Erstellen und Verteilen von Containern zu schaffen.
 
