@@ -356,8 +356,10 @@ Blue Ocean kann direkt ab dem Docker Hub aufgesetzt werden.
 3. Open Blue Ocean (rechts) anwählen und neue Pipeline via Button `Git`  Repository: https://github.com/mc-b/SCS-ESI, Username und Password leer lassen und Button `Create Pipeline` erstellen.
 4. Nach dem Build sollten drei neue Docker Images ersichtlich sind, überprüfen mittels:
 
-	docker image ls
-	
+```Shell
+    docker image ls
+```
+    
 Ausgabe (drei gebuildete Docker Images):
 
     REPOSITORY              TAG                      IMAGE ID            CREATED             SIZE
@@ -369,4 +371,4 @@ Testen mittels (das Starten kann 2 - 3 Minuten dauern):
 
 	docker run -p 8081:8080 -d misegr/scsesi_order
 	
-Browser starten und `http://localhost:8081` anwählen. Es wird eine einfache Order Applikation angezeigt wo iPods etc. bestellt werden können.
+Browser starten und [http://localhost:8081](http://localhost:8081) anwählen. Es wird eine einfache Order Applikation angezeigt wo iPods etc. bestellt werden können.
