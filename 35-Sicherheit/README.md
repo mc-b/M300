@@ -315,21 +315,25 @@ Kontinuierliche Lieferung sollte nicht schwer sein. Blue Ocean vereinfacht Jenki
 Für Jenkins und Blue Ocean braucht es eine Applikation bzw. einen Service welche in einem Git-Repository gespeichert ist und im Repository selbst die Datei `Jenkinsfile`.
 
 ```Groovy
-    pipeline {
-        agent {
-            docker {
-            image 'maven:3-alpine'
-            args '-v /root/.m2:/root/.m2'
-            }
-
-        }
-        stages {
-            stage('Build') {
+	pipeline {
+    	agent none
+	    stages {
+	        stage('Build') {
+			    agent {
+			        docker {
+			            image 'maven:3-alpine'
+			            args '-v /root/.m2:/root/.m2'
+				    }
+			    } 
+        stage('Build Images') { 
+        	agent any
             steps {
-                sh 'mvn -B -DskipTests clean package'
+            		unstash 'jar'
+            		sh 'ls -l scs-demo-esi-order/target/'
+            		sh 'cd docker/varnish      && /usr/bin/docker build -t misegr/scsesi_varnish .'
+            		sh 'cd scs-demo-esi-common && /usr/bin/docker build -t misegr/scsesi_common .'
+            		sh 'cd scs-demo-esi-order  && /usr/bin/docker build -t misegr/scsesi_order .'
             }
-            }
-        }
         }
 ```
 

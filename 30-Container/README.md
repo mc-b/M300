@@ -807,7 +807,7 @@ Anschliessend können die vorhanden Images von unserer lokalen Docker Registry g
 2.  [VM (beinhaltet Docker)](../docker/) erstellen und darin wechseln
 
 ```Shell
-    cd M300/docker`
+    cd M300/docker
     vagrant up
     vagrant ssh
 ```
