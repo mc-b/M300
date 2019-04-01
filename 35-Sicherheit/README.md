@@ -303,56 +303,14 @@ Der gesamte Vorgang wird automatisch ausgelöst durch Einchecken in die Versions
 ***
 Ein Modultest (auch Komponententest oder oft auch als "Unittest" bezeichnet) wird in der Softwareentwicklung angewendet, um die funktionalen Einzelteile (Module) von Computerprogrammen zu testen, d.h., sie auf korrekte Funktionalität zu prüfen.
 
-![](http://iotkit.mc-b.ch/tbz/M300V3/html/45-Sicherheit/images/Docker/Unittest.png)
-
-
-### Docker-in-Docker vs. Socket Mounting
-***
-Docker-in-Docker (DinD) bedeutet einfach, dass Docker selbst in einem Docker-Container läuft.
-
-Dazu sind ein paar besondere Konfigurationseinstellungen notwendig – vor allem muss der Container im privilegierten Modus laufen und ein paar Hakeleien mit dem Dateisystem berücksichtigen.
-
-Der grösste Unterschied zwischen DinD und dem Socket Mounting ist, dass die bei DinD erzeugten Container von den Host-Containern isoliert sind; ein Ausführen von `docker ps` im DinD-Container zeigt nur die Container, die vom DinD-Docker Daemon erstellt wurden. Im Gegensatz dazu zeigt `docker ps` beim Socket Mounting alle Container, unabhängig davon, wo dieser Befehl ausgeführt wird. 
-
-Bei DinD (Docker-in-Docker) sollte folgendes beachtet werden:
-* Man hat seinen eigenen Cache ...
-    * ... Daher werden die Builds zu Beginn langsamer sein und alle Images müssen erneut heruntergeladen werden. Das lässt sich durch den Einsatz einer lokalen Registry oder eines Mirrors abmildern. Es empfiehlt sich jedoch nicht, den Build Cache vom Host zu mounten! Die Docker Engine geht davon aus, dass sie exklusiven Zugriff darauf hat, daher können schlimme Dinge geschehen, wenn der Cache von zwei Instanzen gleichzeitig verwendet wird.
-* Der Container muss im privilegierten Modus laufen...
-    * ... Daher ist er nicht sicherer als beim Socket Mounting (wenn ein Angreifer Zugriff auf den Container erhält, kann er beliebige Geräte mounten, auch Festplatten). Das sollte in Zukunft besser werden, da Docker Unterstützung für feingranularere Berechtigungen angekündigt hat, sodass Benutzer die Geräte auswählen können, auf die DinD Zugriff hat.
-* DinD nutzt ein Volume für das Verzeichnis /var/lib/docker...
-    * ... Dies braucht den Speicherplatz schnell auf, wenn man vergisst, das Volume beim Entfernen des Containers zu löschen.
-
-Grafik zu Docker-in-Docker (DinD) und das Socket-Mounting:
-
-![](http://iotkit.mc-b.ch/tbz/M300V3/html/45-Sicherheit/images/Docker/DinD.png)
-
-
-### Jenkins
-***
-Jenkins ist ein beliebter Open-Source-CI-Server (Continuous Integration).
-
-**Installation** <br>
-Das Jenkins-Image für Docker findet sich unter: https://hub.docker.com/r/jenkins/jenkins/
-
-1. Mit `docker pull jenkins/jenkins` das neuste (latest) Image herunterladen.
-2. Anschliessend wie folgt starten:
-    ```Shell
-        $ docker run -d --name jenkins:jenkins -p 8080:8081 \
-        -v /var/run/docker.sock:/var/run/docker.sock \
-    jenkins
-    ```
-3. Nach erfolgreichem Start das Jenkins-Webinterface im Browser unter http://localhost:8080 aufrufen.
-4. Im Interface angekommen, einen neuen Build mittels "Shell ausführen" erstellen und folgende Angaben machen:
-    ```Shell
-        $ sudo docker run --name for ubuntu bash -c 'for x in 1 2 3 4 5; do echo $x; sleep 1; done:'
-        $ sudo docker logs for
-        $ sudo docker rm for
-    ```
-
+![](../images/Unittest.png)
 
 ### Jenkins & Blue Ocean
 ***
-Kontinuierliche Lieferung sollte nicht schwer sein. Blue Ocean konzentriert sich auf die Bedürfnisse von normalen Entwicklern. Dabei macht Blue Ocean die ganze harte Arbeit.
+
+Jenkins ist ein beliebter Open-Source-CI-Server (Continuous Integration).
+
+Kontinuierliche Lieferung sollte nicht schwer sein. Blue Ocean vereinfacht Jenkins für die Bedürfnisse von normalen Entwicklern. Dabei macht Blue Ocean die ganze harte Arbeit.
 
 Für Jenkins und Blue Ocean braucht es eine Applikation bzw. einen Service welche in einem Git-Repository gespeichert ist und im Repository selbst die Datei `Jenkinsfile`.
 
@@ -379,6 +337,7 @@ Für Jenkins und Blue Ocean braucht es eine Applikation bzw. einen Service welch
 Blue Ocean kann direkt ab dem Docker Hub aufgesetzt werden.
 
 1. Blue Ocean Container starten:
+
     ```Shell
         $ docker run \
         --rm \
@@ -389,7 +348,21 @@ Blue Ocean kann direkt ab dem Docker Hub aufgesetzt werden.
         -v "$HOME":/home \
         jenkinsci/blueocean
     ```
-2. User Interface (in diesem Fall: http://localhost:8082/) im Browser öffnen und den Anweisungen folgen.
-3. Open Blue Ocean (rechts) anwählen und neue Pipeline via Git Repository https://github.com/bernet-tbz/simple-java-maven-app erstellen.
+2. User Interface (in diesem Fall: http://localhost:8082/) im Browser öffnen und den Anweisungen folgen. Der Token ist im Terminalfenster ersichtlich.
+3. Open Blue Ocean (rechts) anwählen und neue Pipeline via Button `Git`  Repository: https://github.com/mc-b/SCS-ESI, Username und Password leer lassen und Button `Create Pipeline` erstellen.
+4. Nach dem Build sollten drei neue Docker Images ersichtlich sind, überprüfen mittels:
 
-**Wichtig:** Die gebuildeten Artefakte können mit dem gleichnamigen Links heruntergeladen werden.
+	docker image ls
+	
+Ausgabe (drei gebuildete Docker Images):
+
+    REPOSITORY              TAG                      IMAGE ID            CREATED             SIZE
+    misegr/scsesi_varnish   latest                   xxxxxxxxxxxx        6 seconds ago       318MB
+    misegr/scsesi_common    latest                   xxxxxxxxxxxx        6 seconds ago       318MB
+    misegr/scsesi_order     latest                   xxxxxxxxxxxx        6 seconds ago       318MB
+
+Testen mittels (das Starten kann 2 - 3 Minuten dauern):
+
+	docker run -p 8081:8080 -d misegr/scsesi_order
+	
+Browser starten und `http://localhost:8081` anwählen. Es wird eine einfache Order Applikation angezeigt wo iPods etc. bestellt werden können.
