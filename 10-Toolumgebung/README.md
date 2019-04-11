@@ -52,7 +52,7 @@ Folgende Arbeiten müssen gemacht werden:
 ### SSH-Key erstellen (lokal)
 ***
 
-**ACHTUNG**: Auf Windows muss zuerst [Git/Bash](#--02---git-client) installiert werden. Anschliessend können die Befehle in der Git/Bash ausgeführt werden.
+**ACHTUNG**: Auf Windows muss zuerst [Git/Bash](#--02---git-client) installiert werden. Anschliessend können die Befehle in der Git/Bash ausgeführt werden. Dabei handelt es sich nur um die Shell von Linux, die auf Windows ausgeführt wird. Alternativ können Sie für die meisten Befehle auch die *PowerShell* verwenden.
 
 1.  Terminal (*Bash*) öffnen
 2.  Folgenden Befehl mit der Account-E-Mail von GitHub einfügen:
