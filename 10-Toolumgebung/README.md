@@ -316,6 +316,12 @@ Die virtuelle Maschine (VM) sollte nun soweit betriebsbereit sein, sprich der Zu
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
+[![](https://img.youtube.com/vi/mPBWWu7sZU4/0.jpg)](https://www.youtube.com/watch?v=mPBWWu7sZU4)
+
+So richten Sie Virtual Box und Vagrant unter Windows ein
+
+---
+
 Kapitel 3 (VirtualBox) sollte uns zeigen, dass das Bereitstellen virtueller Systeme in der konventionellen Art lange dauert und umständlich sein kann.
 Abhilfe bietet hier Vagrant. Vagrant ist eine freie Ruby-Anwendung zur Erstellung und Verwaltung virtueller Maschinen und ermöglicht einfache Softwareverteilung.
 

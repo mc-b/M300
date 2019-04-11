@@ -32,6 +32,12 @@ ___
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 
+[![](https://img.youtube.com/vi/36zducUX16w/0.jpg)](https://www.youtube.com/watch?v=36zducUX16w)
+
+Cloud Computing Services Models - IaaS PaaS SaaS Explained
+
+---
+
 Unter **Cloud Computing** (Rechnerwolke) versteht man die Ausführung von Programmen, die nicht auf dem lokalen Rechner installiert sind, sondern auf einem anderen Rechner, der aus der Ferne (remote) aufgerufen wird.
 
 Technischer formuliert umschreibt das Cloud Computing den Ansatz, IT-Infrastrukturen (z.B. Rechenkapazität, Datenspeicher, Datensicherheit, Netzkapazitäten oder auch fertige Software) über ein Netz zur Verfügung zu stellen, ohne dass diese auf dem lokalen Rechner installiert sein müssen.
@@ -59,6 +65,12 @@ Diese Ebene ist dafür zuständig, containerisierten Workload auf den Ressourcen
 
 ### Dynamic Infrastructure Platforms
 ***
+
+[![](https://img.youtube.com/vi/KXkBZCe699A/0.jpg)](https://www.youtube.com/watch?v=KXkBZCe699A)
+
+Microsoft How does Microsoft Azure work
+
+---
 
 Eine dynamische Infrastruktur-Plattform (Dynamic Infrastructure Platform) ist ein **System**, das Rechen-Ressourcen  virtualisiert und bereitstellt, insbesondere CPU (**compute**), Speicher (**storage**) und Netzwerke (**networks**). 
 Die Ressourcen werden programmgesteuert zugewiesen und verwaltet. Die Bereitstellung erfolgt mit virtuellen Maschinen (VM).
@@ -145,6 +157,12 @@ Folgende Arten von Tools werden für IaC benötigt:
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
+
+[![](https://img.youtube.com/vi/X82DXsAeVDQ/0.jpg)](https://www.youtube.com/watch?v=X82DXsAeVDQ)
+
+Vagrant Tutorial Deutsch
+
+---
 
 Vagrant ist eine Ruby-Anwendung (open-source) zum Erstellen und Verwalten von virtuellen Maschinen (VMs).
 
