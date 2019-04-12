@@ -13,6 +13,24 @@ Die nachstehende Dokumentation zeigt alle Schritte auf, die es zur Einrichtung e
 * Einfache [Linux und Apache Web Server](../80-Ergaenzungen/) Kenntnisse sind von Vorteil.
 * Ein schneller Netzwerk- (Kabel!) und Internet-Anschluss
 
+#### Allgemeine Hinweise
+
+Die meisten Arbeiten erfolgen auf der Kommandozeile, hier als **Terminal** (*Bash*) bezeichnet.
+
+In der Kommandozeile bzw. im Terminal läuft die "Bash" Shell. Das ist nur die Shell von Linux und noch kein vollständiges Linux System. 
+
+Diese Umgebung wird verwendet, weil benötige Programme wie `git`, `ssh-keygen` in der Powershell nicht zur Verfügung stehen. 
+
+Um sich im Filesystem zurechtzufinden, sind folgende Befehle nützlich:
+* `cd /Verzeichnis` wechselt in Verzeichnis z.B. `cd /Users`, alternativ kann die Windows Schreibweise in " verwendet werden, z.B. `cd "C:\Users"`
+* Alternativ kann im Windows Explorer jederzeit ein Terminal mittels rechter Maustaste und `Git Bash Here` geöffnet werden.
+* `cd ~` Wechsel ins eigene Home-Verzeichnis. Dort werden SSH-Keys etc. abgelegt.
+* `cd -` wird auf das zuletzt verwendete Verzeichnis gewechselt.
+* Die Laufwerke von Windows stehen als `/c`, `/d/` zur Verfügung, Bsp. `cd /c/Users` und `cd "C:\Users"` sind indentisch
+* `ls -l` zeigt die Dateien im aktuellen Verzeichnis an
+* `pwd` zeigt den aktuellen Pfad an.
+* Die Windows Befehle stehen auch im Terminal zur Verfügung, z.B. `notepad README.md` 
+
 #### Inhaltsverzeichnis
 
 * 01 - [GitHub Account](#-01---github-account)
@@ -182,7 +200,7 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 1. Terminal (*Bash*) öffnen
 2. Ordner für Repository im gewünschten Verzeichnis erstellen:
     ```Shell
-      $ cd Wohin\auch\immer
+      $ cd Wohin/auch/immer
       $ mkdir MeinLokalesRepository
     ``` 
 3. Repository mit SSH klonen (siehe Webseite des Repositorys unter "Clone or download"):
@@ -203,7 +221,7 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 1.  Terminal (*Bash*) öffnen (nachdem Teile bzw. Dateien des lokalen Repositorys geändert wurden)
 2.  In das entsprechende Verzeichnis des Repository gehen: 
     ```Shell
-      $ cd Pfad\zu\meinem\Repository  
+      $ cd Pfad/zu/meinem/Repository  
     ```  
 3.  Dateien dem Upload hinzufügen:
     ```Shell
@@ -227,7 +245,7 @@ Dieser Abschnitt zeigt die Handhabung von Git-Befehlen auf. Mit den nachfolgende
 Wichtig: Die Befehle müssen innerhalb des lokalen Repositorys ausgeführt werden!
 
 ```Shell 
-$  cd Pfad\zu\meinem\Repository    # Zum lokalen GitHub-Repository wechseln
+$  cd Pfad/zu/meinem/Repository    # Zum lokalen GitHub-Repository wechseln
 
 $  git status                      # Geänderte Datei(en) werden rot aufgelistet
 $  git add -A                      # Fügt alle Dateien zum "Upload" hinzu
@@ -338,7 +356,7 @@ Nachfolgend sind einzelne Schritte zur Einrichtung von Vagrant dokumentiert:
 1. Terminal (*Bash*) öffnen
 2. In gewünschtem Verzeichnis einen neuen Ordner für die VM anlegen:
     ```Shell
-      $ cd Wohin\auch\immer
+      $ cd Wohin/auch/immer
       $ mkdir MeineVagrantVM
       $ cd MeineVagrantVM
     ``` 
@@ -350,7 +368,7 @@ Nachfolgend sind einzelne Schritte zur Einrichtung von Vagrant dokumentiert:
     ``` 
 4. Die VM ist nun in Betrieb (erscheint auch in der Übersicht innerhalb von VirtualBox) und kann via SSH-Zugriff bedient werden:
     ```Shell
-      $ cd Pfad\zu\meiner\Vagrant-VM      #Zum Verzeichnis der VM wechseln
+      $ cd Pfad/zu/meiner/Vagrant-VM      #Zum Verzeichnis der VM wechseln
       $ vagrant ssh                       #SSH-Verbindung zur VM aufbauen
 
       #Anschliessend können ganz normale Bash-Befehle abgesetzt werden:
@@ -369,7 +387,7 @@ Schlussfolgerung: Eine VM lässt sich mit Vagrant eindeutig schneller und unkomp
 1. Terminal (*Bash*) öffnen
 2. In gewünschtem Verzeichnis einen neuen Ordner für die VM anlegen:
     ```Shell
-      $ cd Wohin\auch\immer
+      $ cd Wohin/auch/immer
       $ mkdir MeineVagrantVM
       $ cd MeineVagrantVM
     ``` 
@@ -381,7 +399,7 @@ Schlussfolgerung: Eine VM lässt sich mit Vagrant eindeutig schneller und unkomp
     ``` 
 4. Die VM ist nun in Betrieb (erscheint auch in der Übersicht innerhalb von VirtualBox) und kann via SSH-Zugriff bedient werden:
     ```Shell
-      $ cd Pfad\zu\meiner\Vagrant-VM      #Zum Verzeichnis der VM wechseln
+      $ cd Pfad/zu/meiner/Vagrant-VM      #Zum Verzeichnis der VM wechseln
       $ vagrant ssh                       #SSH-Verbindung zur VM aufbauen
 
       #Anschliessend können ganz normale Bash-Befehle abgesetzt werden:
@@ -401,7 +419,7 @@ Um den Automatisierungsgrad von Vagrant im Rahmen dieser Dokumentation etwas bes
 Nachfolgend wird die VM mit einem bereits abgeänderten File bzw. VM aus dem M300-Repository erstellt:
 
 1. Terminal (*Bash*) öffnen
-2. In das M300-Verzeichnis (\M300\vagrant\web) wechseln:
+2. In das M300-Verzeichnis (/M300/vagrant/web) wechseln:
     ```Shell
       $ cd Pfad/zum-M300-Verzeichnis/vagrant/web
     ``` 
@@ -410,7 +428,7 @@ Nachfolgend wird die VM mit einem bereits abgeänderten File bzw. VM aus dem M30
       $ vagrant up
     ``` 
 4. Webbrowser in der VM öffnen und prüfen, ob der Standard-Content des Webservers unter "http://127.0.0.01:8080" (localhost) erreichbar ist
-5. Im Ordner `\web` die Hauptseite `index.html` editieren bzw. durch eine andere ersetzen (z.B. HTML5up-Themplate) und das Resultat überprüfen
+5. Im Ordner `/web` die Hauptseite `index.html` editieren bzw. durch eine andere ersetzen (z.B. HTML5up-Themplate) und das Resultat überprüfen
 6. Abschliessend kann die VM wieder gelöscht werden:
     ```Shell
       $ vagrant destroy -f
