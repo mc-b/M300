@@ -22,6 +22,8 @@ Für die Installation verwenden Sie die Anleitung vom Projekt:
 
 * [Docker und Kubernetes – Übersicht und Einsatz](https://github.com/mc-b/duk)
 
+**ACHTUNG**: es wird ein PC oder Notebook mit mindestens 16 GB RAM und 40 GB HD benötigt.
+
 Alternative Installationen sind im Projekt [lernkube](https://github.com/mc-b/lernkube#alternativen) beschrieben.
 
 ### Erzeugen der Ressourcen (Pod, Service) mittels `kubectl run`
