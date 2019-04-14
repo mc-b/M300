@@ -79,36 +79,36 @@ Aus der Ausgabe nehmen wir alles raus, was nicht zwingend benötigt wird, was zu
 
 ```YAML
 
-	apiVersion: v1
-	kind: Pod
-	metadata:
-	  labels:
-	    app.kubernetes.io/name: apache
-	  name: apache
-	spec:
-	  containers:
-	  - image: httpd
-	    name: apache
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app.kubernetes.io/name: apache
+  name: apache
+spec:
+  containers:
+  - image: httpd
+    name: apache
 ```
 
 **apache-service.yaml**
 
 ```YAML
 
-	apiVersion: v1
-	kind: Service
-	metadata:
-	  labels:
-	    app.kubernetes.io/name: apache
-	  name: apache
-	spec:
-	  ports:
-	  - port: 80
-	    protocol: TCP
-	    targetPort: 80
-	  selector:
-	    app.kubernetes.io/name: apache
-	  type: LoadBalancer
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/name: apache
+  name: apache
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app.kubernetes.io/name: apache
+  type: LoadBalancer
 ```
 
 Speichern wir diese, z.B. im Verzeichnis `apache` können wir diese mittels einem Befehl erzeugen. Vorher erzeugen wir aber, wie vorher, ein Namespace.
