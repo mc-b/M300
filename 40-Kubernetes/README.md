@@ -17,7 +17,8 @@ Sie können einen einfachen Kubernetes Kluster aufsetzen.
 * 03 - [Kubernetes Cluster](#-03---kubernetes-cluster)
 * 04 - [Reflexion](#-04---reflexion)
 * 05 - [Fragen](Fragen.md)
-* 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
+* 06 - [Kubernetes hands-on](K8s.md)
+* 07 - [Quellenverzeichnis](#-07---quellenverzeichnis)
 
 ___
 
@@ -219,7 +220,7 @@ Die IP-Adressen werden fix vergeben. Bei fixer IP-Adressen Vergabe, muss ein "De
 
 
 
-![](../images/Magnifier_36x36.png "Quellenverzeichnis") 06 - Quellenverzeichnis
+![](../images/Magnifier_36x36.png "Quellenverzeichnis") 07 - Quellenverzeichnis
 ====== 	
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
