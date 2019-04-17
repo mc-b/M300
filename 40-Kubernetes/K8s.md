@@ -22,6 +22,17 @@ Für die Installation verwenden Sie die Anleitung vom Projekt:
 
 * [Docker und Kubernetes – Übersicht und Einsatz](https://github.com/mc-b/duk)
 
+Am Ende erscheint folgende Meldung
+
+    master-01: ====================================================================
+    master-01: VM: master-01, Cluster-IP: 192.168.60.100
+    master-01: Dashboard token:      eyJhbGciOiJQA.....
+    master-01: ====================================================================
+
+Der Dashboard token wird für den Zugriff auf das Dashboard benötigt (wie ein Password).
+
+Um `docker`, `kubectl` und die Hilfsscripts verwenden zu können ist entweder `kubeps.bat` (für PowerShell), `kubesh.bat` (für Bash) oder in der gestarten `Bash` Shell `source kubeenv` auszuführen. Diese setzen die Umgebungsvariablen für Docker und Kubernetes und ermöglichen den Zugriff vom Notebook (Windows) auf den Kubernetes Cluster. Alternativ kann mittels `vagrant ssh master-01` in die VM gewechselt werden um dort `kubectl` auszuführen.
+
 **ACHTUNG**: es wird ein PC oder Notebook mit mindestens 16 GB RAM und 40 GB HD benötigt.
 
 Alternative Installationen sind im Projekt [lernkube](https://github.com/mc-b/lernkube#alternativen) beschrieben.
