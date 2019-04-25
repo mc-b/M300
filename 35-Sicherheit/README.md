@@ -375,5 +375,5 @@ Browser starten und [http://localhost:8081](http://localhost:8081) anwählen. Es
 
 **Links**
 
-* [Praxiserfahrung DevOps – DevOps was?](https://stage-news.digicomp.ch/?p=39594&preview=1&_ppp=d1c5e6b870)
+* [Praxiserfahrung DevOps – DevOps was?](https://www.digicomp.ch/blog/2019/04/25/praxiserfahrung-devops-devops-was)
 
