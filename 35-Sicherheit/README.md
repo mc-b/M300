@@ -372,3 +372,8 @@ Testen mittels (das Starten kann 2 - 3 Minuten dauern):
 	docker run -p 8081:8080 -d misegr/scsesi_order
 	
 Browser starten und [http://localhost:8081](http://localhost:8081) anwählen. Es wird eine einfache Order Applikation angezeigt wo iPods etc. bestellt werden können.
+
+**Links**
+
+* [Praxiserfahrung DevOps – DevOps was?](https://stage-news.digicomp.ch/?p=39594&preview=1&_ppp=d1c5e6b870)
+

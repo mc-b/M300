@@ -168,6 +168,8 @@ Ein Apache Web Server kann wie folgt Bereitgestellt werden:
 
 * [Homepage](http://kubernetes.io)
 * [Beispiele](https://github.com/mc-b/duk)
+* [50 Best Kubernetes Architecture Tutorials](https://securityboulevard.com/2019/04/50-best-kubernetes-architecture-tutorials/)
+* [Container Design Patterns for Kubernetes - Part 1](https://www.weave.works/blog/container-design-patterns-for-kubernetes/)
 
 ![](../images/Kubernetes_36x36.png "Cloud Computing") 03 - Kubernetes Cluster
 ======
