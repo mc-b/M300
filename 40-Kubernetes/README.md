@@ -205,12 +205,18 @@ Die wichtigsten Konfigurationen:
 
 Es wird ein Master und zwei Worker Nodes erstellt. Der Master und die Worker Nodes werden während der Installation automatisch miteinander gejoint.
 
-	use_dhcp: true  
-	net:
-	  network_type: public_network
+    use_dhcp: false  
+    # Fixe IP Adressen mit welchen die IP fuer Master und Worker beginnen sollen
+    ip:
+      master:   192.168.137.100
+      worker:   192.168.137.111
+    # Netzwerk "private_network" fuer Host-only Netzwerk, "public_network" fuer Bridged Netzwerke
+    net:
+      network_type: private_network
 
-Am einfachsten ist es, DHCP mit der Einstellung `public_network` zu verwenden. Dann wird für den Master und die Worker Nodes einen dynamische IP-Adresse vergeben.
-Die Einstellungen `ip` in `config.yaml` werden ignoriert.
+Die restlichen Standardeinstellungen wie Host-only Netzwerk mit fixen IP-Adressen kann 1:1 verwendet werden. 
+
+*Nachteil*: es kann nur vom Notebook wo sich die VMs befinden auf den Cluster zugegriffen werden. 
 
 ![](../images/Reflexion_36x36.png "Fazit / Reflexion") 04 - Reflexion
 ======
