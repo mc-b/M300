@@ -22,6 +22,8 @@ Für die Installation verwenden Sie die Anleitung vom Projekt:
 
 * [Docker und Kubernetes – Übersicht und Einsatz](https://github.com/mc-b/duk)
 
+Um Memory, Anzahl Worker etc. anzupassen und für das Aufsetzen eines Cluster siehe Projekt [lernkube](https://github.com/mc-b/lernkube#cluster).
+
 Am Ende erscheint folgende Meldung
 
     master-01: ====================================================================

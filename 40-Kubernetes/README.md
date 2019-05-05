@@ -205,15 +205,12 @@ Die wichtigsten Konfigurationen:
 
 Es wird ein Master und zwei Worker Nodes erstellt. Der Master und die Worker Nodes werden während der Installation automatisch miteinander gejoint.
 
-	use_dhcp: false  
-	ip:
-	  master:   192.168.178.200
-	  worker:   192.168.178.201
+	use_dhcp: true  
 	net:
 	  network_type: public_network
-	  default_router: "route add default gw 192.168.178.1 enp0s8 && route del default gw 10.0.2.2 enp0s3"	  
 
-Die IP-Adressen werden fix vergeben. Bei fixer IP-Adressen Vergabe, muss ein "Default Router" gesetzt sein, ebenfalls muss ein "Public Network" verwendet werden. Ansonsten finden sich zwar Master und Worker, können aber nicht miteinnander kommunizieren.
+Am einfachsten ist es, DHCP mit der Einstellung `public_network` zu verwenden. Dann wird für den Master und die Worker Nodes einen dynamische IP-Adresse vergeben.
+Die Einstellungen `ip` in `config.yaml` werden ignoriert.
 
 ![](../images/Reflexion_36x36.png "Fazit / Reflexion") 04 - Reflexion
 ======
