@@ -37,7 +37,7 @@ Um sich im Filesystem zurechtzufinden, sind folgende Befehle nützlich:
 * 02 - [Git Client](#--02---git-client)
 * 03 - [VirtualBox](#--03---virtualbox)
 * 04 - [Vagrant](#--04---vagrant)
-* 05 - [Visual Studio Code](#-05---visual-studio-code)
+* 05 - [Visual Studio Code](#-05---visual-studio-code) / [Alternative Markdown Editoren](#alternative-editoren)
 * 06 - [Quellenverzeichnis](#-06---quellenverzeichnis)
 
 ___
@@ -527,11 +527,16 @@ StackEdit ist ein Markdown Editor im Browser.
 
 * [https://stackedit.io/](https://stackedit.io/)
 
+#### Typora
 
-***
+Typora bietet Ihnen eine nahtlose Erfahrung als Leser und Autor. Es entfernt das Vorschaufenster, den Modusumschalter, die Syntaxsymbole des Markdown-Quellcodes und alle anderen unnötigen Ablenkungen. Diese werden durch eine echte Live-Vorschau ersetzt, damit Sie sich auf den Inhalt selbst konzentrieren können.
+
+* [Typora](https://typora.io/)
+
 
 ![](../images/Magnifier_36x36.png "Quellenverzeichnis") 06 - Quellenverzeichnis
 ====== 
+***
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
 

@@ -305,6 +305,14 @@ Ein Modultest (auch Komponententest oder oft auch als "Unittest" bezeichnet) wir
 
 ![](../images/Unittest.png)
 
+### TravisCI
+***
+
+Travis CI ist ein Cloud basiertes CI System. Es zeichnet sich durch eine gute Integration mit github aus.
+
+* [Konzepte für Anfänger](https://docs.travis-ci.com/user/for-beginners/)
+* [Tutorial](https://docs.travis-ci.com/user/tutorial/)
+
 ### Jenkins & Blue Ocean
 ***
 
