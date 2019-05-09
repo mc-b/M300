@@ -29,29 +29,7 @@ Apache Webserver Installieren
 Testen ob Apache Webserver läuft
 
 	curl localhost
-	
-### Lokale Packetquellen verwenden (optional)
 
-Auf dem TBZ Repository Server stehen die gespiegelten (`apt-mirror`) [Ubuntu Packetquellen](http://10.1.66.11/apt-mirror) zur Verfügung.
-
-Um diese anstelle der Standard Packetquellen zu verwenden ist der Inhalt der Datei `/etc/apt/sources.list` mit nachfolgendem Inhalt zu ersetzen, z.B. mit `nano`:
- 
-	## Note, this file is written by cloud-init on first boot of an instance
-	## modifications made here will not survive a re-bundle.
-	## if you wish to make changes you can:
-	## a.) add 'apt_preserve_sources_list: true' to /etc/cloud/cloud.cfg
-	##     or do the same in user-data
-	## b.) add sources in /etc/apt/sources.list.d
-	## c.) make changes to template file /etc/cloud/templates/sources.list.tmpl
-	deb http://10.1.66.11/apt-mirror/mirror/archive.ubuntu.com/ubuntu xenial main restricted
-	deb http://10.1.66.11/apt-mirror/mirror/archive.ubuntu.com/ubuntu xenial-updates main restricted
-	deb http://10.1.66.11/apt-mirror/mirror/archive.ubuntu.com/ubuntu xenial-security main restricted
-	
-	## N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu
-	## team. Also, please note that software in universe WILL NOT receive any
-	## review or updates from the Ubuntu security team.
-	deb http://10.1.66.11/apt-mirror/mirror/archive.ubuntu.com/ubuntu xenial universe
-	
 **Links**
 
 *   [Paketmanagement](http://debiananwenderhandbuch.de/paketmanagement.html)

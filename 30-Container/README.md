@@ -289,14 +289,6 @@ Funktionsfähigkeit überprüfen:
     $ netstat -tulpen
 ```
 
-Wenn ein interner Server vorhanden ist, kann das Grundimage (ubuntu:14.04) wie folgt von dort geladen und installiert werden:
-```Shell
-    $ wget http://10.1.66.11/docker/ubuntu-14.04.tar
-    $ docker load -i ubuntu-14.04.tar
-    $ docker tag ubuntu:14.04 ubuntu:latest
-    $ rm ubuntu-14.04.tar
-```
-
 ### Konzepte
 ***
 
