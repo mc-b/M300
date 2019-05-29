@@ -303,6 +303,9 @@ Funktionsfähigkeit überprüfen:
 * Ist eine Dockerfile-Anweisung erfolgreich abgeschlossen worden, wird der temporär erzeugte Container wieder gelöscht.
 
 **Anweisungen im Dockerfile** <br>
+
+* `FROM`
+    * Welches Base Image von [hub.docker.com](https://hub.docker.com) verwendet werden soll, z.B. ubuntu:16.04
 * `ADD`
     *  Kopiert Dateien aus dem Build Context oder von URLs in das Image.
 * `CMD`
