@@ -35,16 +35,25 @@ damit auf die Flaschenhälse des Systems zu beschränken. In einem Monolith wird
 
 **Builden:**
 
+Um den Microservices in ein Image zu verpacken, wechseln wir ins dieses Verzeichnis und bilden das Image mit Namen `microservice`
+
 	cd /vagrant/microservice
 	docker build -t microservice .
 
+*Anmerkung*: das Verzeichnis `/vagrant` in der VM, ist das gleiche Verzeichnis wie `M300/docker/` auf dem Notebook. Vagrant mountet dieses automatisch beim start der VM.
+
 **Aufruf:**
 
-    docker run -d -v `pwd`:/opt/node -p 8081:8081 --name microservice --rm microservice
+Den Microservice bzw. dessen Image können wir nun wie folgt starten. Wir starten zwei Container (Instanzen) zum Testen.
+
+    docker run -d -p 32760:8081 --name microservice1 --rm microservice
+    docker run -d -p 32761:8081 --name microservice2 --rm microservice
     
 **Testen:**
 
-	curl localhost:8081
+Beide Container (Instanzen) sollten jetzt via Browser oder `curl` erreichbar sein.
 
+    curl localhost:32760
+    curl localhost:32761
 
     
