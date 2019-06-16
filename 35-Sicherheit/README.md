@@ -384,4 +384,5 @@ Browser starten und [http://localhost:8081](http://localhost:8081) anwählen. Es
 **Links**
 
 * [Praxiserfahrung DevOps – DevOps was?](https://www.digicomp.ch/blog/2019/04/25/praxiserfahrung-devops-devops-was)
+* [Creating your first Pipeline](https://jenkins.io/doc/pipeline/tour/hello-world/)
 
