@@ -34,16 +34,14 @@ Welche Linux Kernel Funktionalität verwenden Container?
 
 Welches Architekturmuster verwendet der Entwickler wenn er Container einsetzt?
 <details><summary>Antwort</summary>  
-        [Microservices]()
+        Microservices
 </p></details>
 
 ---
 
-Welches sind die drei Hauptmerkmale von Microservices?
+Welches sind die drei Hauptmerkmale (abgeleitet vom Ur-Unix) von Microservices?
 <details><summary>Antwort</summary>  
-        * Ein Programm soll nur eine Aufgabe erledigen, und das soll es gut machen.
-        * Programme sollen zusammenarbeiten können.
-        * Nutze eine universelle Schnittstelle. In UNIX sind das Textströme. Bei Microservices das Internet (REST)
+        Ein Programm soll nur eine Aufgabe erledigen, und das soll es gut machen. Programme sollen zusammenarbeiten können. Nutze eine universelle Schnittstelle. In UNIX sind das Textströme. Bei Microservices das Internet (REST).
 </p></details>
 
 ---
@@ -107,7 +105,7 @@ Welche Teile von Docker sind durch Kubernetes obsolet geworden, bzw. sollten nic
 
 ---
 
-Welche Aussage ist besser (siehe auch [The Twelve-Factor App](https://12factor.net/)?
+Welche Aussage ist besser (siehe auch [The Twelve-Factor App](https://12factor.net/))?
 * a) Dockerfile sollten möglichst das Builden (CI) und Ausführen von Services beinhalten, so ist alles an einem Ort und der Entwickler kann alles erledigen.
 * b) Das Builden und Ausführen von Services ist strikt zu trennen. Damit saubere und nachvollziehbare Services mittels CI/CD Prozess entstehen. 
 <details><summary>Antwort</summary>
@@ -119,9 +117,23 @@ Welche Aussage ist besser (siehe auch [The Twelve-Factor App](https://12factor.n
 ### Docker Hub
 ***
 
+Was ist Docker Hub?
+<details><summary>Antwort</summary>
+        Ein Container Registry, wo Container Image gespeichert werden. Docker Hub wird durch die Firma Docker zur Verfügung gestellt wird.
+</p></details>
+
+---
+
+Welches sind die Alternativen?
+<details><summary>Antwort</summary>
+        Praktisch jeder Cloud Anbieter stellt eine Container Registry zur Verfügung. Auch die Anbieter für die Verwaltung von Build Artefakten (z.B. Sonatype Nexus) stellen Docker Registries zur Verfügung oder haben deren Funktionalität integriert. 
+</p></details>
+
+---
+
 Warum sollte eine eigene Docker Registry im Unternehmen verwendet werden?
 <details><summary>Antwort</summary>
-        Sicherheit, bzw. das mögliche Fehlen davon
+        Sicherheit, bzw. das mögliche Fehlen davon. Es kann nicht Sichergestellt werden, dass alle Container Images auf Docker Hub sicher sind.
 </p></details>
 
 ---
@@ -136,7 +148,7 @@ Warum sollten Versionen `tag` von Images immer angegeben werden?
 Was ist der Unterschied zwischen `docker save`/`docker load` und `docker export`/`docker import`?
 <details><summary>Antwort</summary>
         save/load ist für Images, export/import für Container.
-        So ist es möglich auch ohne Docker Registry Container Images auszutauschen.
+        So ist es möglich auch ohne Docker Registry Container Images auszutauschen, z.B. in einer Bank.
 </p></details>
 
 ---

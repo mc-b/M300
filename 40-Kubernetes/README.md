@@ -105,12 +105,16 @@ Die Orchestrierung mittels Kubernetes wird von führenden Cloud-Plattformen wi
 ### Objekte
 ***
 
-* **Pod** - Ein Pod repräsentiert eine Gruppe von Anwendungs-Containern und Volumes,
+* **Pod** - Ein [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) repräsentiert eine Gruppe von Anwendungs-Containern und Volumes,
 die in der gleichen Ausführungsumgebung (gleiche IP, Node) laufen.
-* **ReplicaSet**: ReplicaSets bestimmen wieviele Exemplare eines Pods laufen und stellen sicher, dass die angeforderte Menge auch verfügbar ist. 
-* **Deployment**: Erweitern ReplicaSets um deklarative Updates (z.B. von Version 1 auf 1.1) von Pods.
-* **Service**: Ein Service (manchmal auch als Microservice bezeichnet) steuert den Zugriff auf einen Pod (IP-Adresse, Port). Während Pods ersetzt werden können (z.B. durch Update auf neue Version) bleibt ein Service stabil.
-* **Ingress**: Ähnlich einem Reverse Proxy ermöglicht ein Ingress den Zugriff auf einen Service über einen URL.
+* **ReplicaSet**: [ReplicaSets](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) bestimmen wieviele Exemplare eines Pods laufen und stellen sicher, dass die angeforderte Menge auch verfügbar ist. 
+* **Deployment**: [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) erweitern ReplicaSets um deklarative Updates (z.B. von Version 1.0 auf 1.1) von Container Images.
+* **Service**: Ein [Service](https://kubernetes.io/docs/concepts/services-networking/service/) steuert den Zugriff auf einen Pod (IP-Adresse, Port). Während Pods (bzw. Images) ersetzt werden können (z.B. durch Update auf neue Version) bleibt ein Service stabil.
+* **Ingress**: Ähnlich einem Reverse Proxy ermöglicht ein [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) den Zugriff auf einen Service über einen URL.
+
+Weitere siehe [Kubernetes Concepts](https://kubernetes.io/docs/concepts/).
+
+Unterhaltsame Broschüre mit dem Titel ["Phippy Goes to the Zoo – A Kubernetes Story"](https://azure.microsoft.com/en-us/resources/phippy-goes-to-the-zoo/en-us/), zeigt in der Form eines Kinderbuches wesentliche Objekte von Kubernetes auf.
 
 ### Installation
 ***
