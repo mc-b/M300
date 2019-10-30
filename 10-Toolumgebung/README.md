@@ -117,12 +117,12 @@ Datei %HOME%/.ssh/id_rsa.pub oder $HOME/.ssh/id_rsa.pub in Zwischenablage kopier
     ```
 4.  Nun muss der Schlüssel dem Agent nur noch hinzugefügt werden:
     ```Shell
-      $ ssh-add -K ~/.ssh/id_rsa
+      $ ssh-add -k ~/.ssh/id_rsa
     ```
 5.  Der SSH-Key muss nun nur noch kopiert und anschliessend dem GitHub-Account hinzugefügt werden (siehe "SSH-Key hinzufügen"):
     ```Shell
-      $ pbcopy < ~/.ssh/id_rsa.pub
-      # Kopiert den Inhalt der id_rsa.pub Datei in die Zwischenablage
+      $ cat ~/.ssh/id_rsa.pub
+      # Kopiert den Angezeiten Inhalt der id_rsa.pub Datei in die Zwischenablage
     ``` 
 
 ### SSH-Key hinzufügen
