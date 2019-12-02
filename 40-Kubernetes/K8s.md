@@ -21,6 +21,8 @@ Der Einfachheit halber, verwenden wir nur Pods (beinhalten Container) und Servic
 Für die Installation verwenden Sie die Anleitung vom Projekt:
 
 * [Docker und Kubernetes – Übersicht und Einsatz](https://github.com/mc-b/duk)
+* Alternativ kann auch die einfachere Kubernetes Umgebung aus [DevOps Engineering Practices & Tools (CDI)](https://github.com/mc-b/cdi/tree/master/02-Infrastruktur/kubernetes) 
+* oder [K3s](https://github.com/rancher/k3s/blob/master/README.md#quick-start---install-script) verwendet werden. Für K3s muss zuerst eine Linux VM erstellt werden.
 
 Um Memory, Anzahl Worker etc. anzupassen und für das Aufsetzen eines Cluster siehe Projekt [lernkube](https://github.com/mc-b/lernkube#cluster).
 
