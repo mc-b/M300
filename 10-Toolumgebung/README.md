@@ -301,6 +301,8 @@ Für das weitere Vorgehen wird eine System-Abbild-Datei benötigt. Dazu laden wi
 9. Alle Änderungen speichern und die VM starten
 10. Den Installationsanweisungen der OS-Installation folgen und anschliessend zu Abschnitt "VM einrichten" gehen
 
+Falls Linux nicht bootet: In den *Settings* der virtuellen Maschine unter *Speicher* überprüfen, ob die virt. HD am IDE-Controller angeschlossen ist. 
+
 ### VM einrichten
 ***
 Die virtuelle Maschine (VM) sollte nun soweit betriebsbereit sein, sprich der Zugriff auf den Home-Desktop ist möglich. 
@@ -446,7 +448,7 @@ Für die Einrichtung muss man sich nach den nachfolgenden Anweisungen orientiere
 
 ### Software herunterladen & installieren
 ***
-1. Unter [dieser Webseite](https://code.visualstudio.com/"visualstudio.com") lässt sich der Installer (Version 1.26.1) herunterladen.
+1. Unter [dieser Webseite](https://code.visualstudio.com/ "visualstudio.com") lässt sich der Installer (Version 1.26.1) herunterladen.
 2. Auf "Download for Mac" klicken und warten, bis das Fenster zum Herunterladen erscheint. Anschliessend den Download des Installers starten
 3. Die Installation erfolgt auch hier GUI-basiert. Wiederum aber Standard (ohne spezielle Anpassungen), sodass an dieser Stelle auf eine Erklärung ebenfalls verzichtet wird.
 4. Sobald der Vorgang abgeschlossen wurde, kann mit dem Herunterladen der ISO-Datei und der VM-Erstellung fortgefahren werden.
