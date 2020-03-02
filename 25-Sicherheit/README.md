@@ -110,7 +110,7 @@ Der Apache-Webserver kann auch als Reverse Proxy eingerichtet werden.
 **Installation**
 Dazu müssen folgende Module installiert werden:
 ```Shell
-    $ sudo apt-get install libapache2-mod-proxy-html
+    $ sudo apt-get install libapache2-mod-proxy-html --> ist schon im apache2-bin enthalten
     $ sudo apt-get install libxml2-dev
 ```
 
