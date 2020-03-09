@@ -37,12 +37,12 @@ Eine Firewall ist ein Sicherungssystem, welches ein Rechnernetz oder einen einze
 Jedes Firewall-Sicherungssystem basiert auf einer Softwarekomponente. Die Firewall-Software dient dazu, den Netzwerkzugriff zu beschränken, basierend auf Absender- oder Zieladresse und genutzten Diensten. Sie überwacht den durch die Firewall laufenden Datenverkehr und entscheidet anhand festgelegter Regeln, ob bestimmte Netzwerkpakete durchgelassen werden oder nicht. Auf diese Weise versucht sie, unerlaubte Netzwerkzugriffe zu unterbinden.
 
 **Reverse Proxy**
-Der Reverse Proxy ist ein Proxy, der Ressourcen für einen Client von einem oder mehreren Servern holt. Die Adressumsetzung wird in der entgegengesetzten Richtung vorgenommen, wodurch die wahre Adresse des Zielsystems dem Client verborgen bleibt. Während ein typischer Proxy dafür verwendet werden kann, mehreren Clients eines internen (privaten – in sich geschlossenen) Netzes den Zugriff auf ein externes Netz zu gewähren, funktioniert ein Reverse Proxy genau andersherum.
+Der [Reverse Proxy](https://de.wikipedia.org/wiki/Reverse_Proxy) ist ein Proxy, der Ressourcen für einen Client von einem oder mehreren Servern holt. Die Adressumsetzung wird in der entgegengesetzten Richtung vorgenommen, wodurch die wahre Adresse des Zielsystems dem Client verborgen bleibt. Während ein typischer Proxy dafür verwendet werden kann, mehreren Clients eines internen (privaten – in sich geschlossenen) Netzes den Zugriff auf ein externes Netz zu gewähren, funktioniert ein Reverse Proxy genau andersherum.
 
 
 ### UFW Firewall
 ***
-UFW steht für `Uncomplicated Firewall`. Ziel von UFW ist es, ein unkompliziertes Kommandozeilen-basiertes Frontend für das sehr leistungsfähige, aber nicht gerade einfach zu konfigurierende iptables zu bieten. UFW unterstützt sowohl IPv4 als auch IPv6.
+UFW steht für `Uncomplicated Firewall`. Ziel von UFW ist es, ein unkompliziertes Kommandozeilen-basiertes Frontend für das sehr leistungsfähige, aber nicht gerade einfach zu konfigurierende iptables zu bieten. UFW unterstützt sowohl IPv4 als auch IPv6. Mehr Informationen finden Sie unter: (https://wiki.ubuntu.com/UncomplicatedFirewall)
 
 **Ausgabe der offenen Ports**
 ```Shell
@@ -105,7 +105,7 @@ Werden keine Ausgehenden Verbindungen benötigt oder nur bestimmte (z.B. ssh) k�
 
 ### Reverse Proxy
 ***
-Der Apache-Webserver kann auch als Reverse Proxy eingerichtet werden. 
+Der Apache-Webserver kann auch als [Reverse Proxy](https://httpd.apache.org/docs/2.4/howto/reverse_proxy.html#related) eingerichtet werden. 
 
 **Installation**
 Dazu müssen folgende Module installiert werden:
@@ -270,8 +270,6 @@ Folgende Befehle dienen zum ändern der Rechte:
 ======
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
-
-Es gab einmal eine Zeit, als Computer im Netz über das Telnet-Protokoll zugänglich waren. Da dieses Protokoll keine Verschlüsselung bot, wurde das Mitschneiden von Passwörtern zur trivialen Angelegenheit.
 
 Um den Fernzugang zu sichern, schrieb Tatu Ylönen Mitte der 1990er eine Programmsuite – bestehend aus Server-, Client- und Hilfsprogrammen – die er SSH (Secure Shell) nannte.
 
