@@ -145,7 +145,7 @@ Ein Apache Web Server kann wie folgt Bereitgestellt werden:
 	    app: apache
 	---
 	
-	apiVersion: apps/v1beta2 # for versions before 1.8.0 use apps/v1beta1
+	apiVersion: apps/v1
 	kind: Deployment
 	metadata:
 	  name: apache
@@ -172,6 +172,7 @@ Ein Apache Web Server kann wie folgt Bereitgestellt werden:
 
 * [Homepage](http://kubernetes.io)
 * [Beispiele](https://github.com/mc-b/duk)
+* [Explaining Kubernetes in 10 minutes using an analogy](https://opensource.com/article/20/7/kubernetes-analogy)
 * [50 Best Kubernetes Architecture Tutorials](https://securityboulevard.com/2019/04/50-best-kubernetes-architecture-tutorials/)
 * [Container Design Patterns for Kubernetes - Part 1](https://www.weave.works/blog/container-design-patterns-for-kubernetes/)
 
