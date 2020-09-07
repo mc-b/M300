@@ -1,0 +1,50 @@
+
+
+Vagrant.configure("2") do |config|
+
+  # Ubuntu 20.x
+  config.vm.box = "ubuntu/xenial64"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "256"  
+  end
+
+  config.vm.define "master" do |master|
+    master.vm.network "private_network", ip: "192.168.50.2", virtualbox__dhcp_server: false
+    master.vm.provision "shell", inline: <<-SHELL 
+        # Debug ON!!!
+        set -o xtrace
+        sudo apt-get update
+        sudo apt install -y isc-dhcp-server
+        cat <<%EOF% | sudo tee -a /etc/dhcp/dhcpd.conf
+subnet 192.168.50.0 netmask 255.255.255.0 {
+ range 192.168.50.20 192.168.50.100;
+ option routers 192.168.50.254;
+ option domain-name-servers 192.168.50.1;
+ option domain-name "mydomain.example";
+}
+%EOF%
+    sudo sed -i -e 's/INTERFACES=""/INTERFACES="enp0s8"/g' /etc/default/isc-dhcp-server
+    sudo systemctl restart isc-dhcp-server.service  
+    SHELL
+  end
+
+  config.vm.define "worker1" do |w1|
+    # Funktioniert nicht, weil vagrant den DHCP Server von Virtualbox startet
+    w1.vm.network "private_network", type: "dhcp",  name: "vboxnet0", virtualbox__dhcp_server: false
+    w1.vm.provision "shell", inline: <<-SHELL 
+        # Debug ON!!!
+        set -o xtrace
+        ifconfig
+    SHELL
+  end
+
+  config.vm.define "worker2" do |w2|
+    w2.vm.network "private_network", type: "dhcp",  name: "vboxnet0", virtualbox__dhcp_server: false
+    w2.vm.provision "shell", inline: <<-SHELL 
+        # Debug ON!!!
+        set -o xtrace
+        ifconfig
+    SHELL
+  end  
+end
