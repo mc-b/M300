@@ -27,7 +27,8 @@ subnet 192.168.50.0 netmask 255.255.255.0 {
         sudo sed -i -e 's/INTERFACES=""/INTERFACES="enp0s8"/g' /etc/default/isc-dhcp-server
         sudo systemctl restart isc-dhcp-server.service  
         # DNS Server
-        sudo cp /vagrant/db.example.com /vagrant/db.192 /vagrant/named.conf.local /etc/bind/
+        sudo cp /vagrant/named.conf.local /etc/bind/
+        sudo cp /vagrant/db.example.com /vagrant/db.192  /var/lib/bind/
         sudo systemctl restart bind9.service
     SHELL
   end

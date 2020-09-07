@@ -8,10 +8,10 @@
 
 zone "example.com" {
     type master;
-    file "/etc/bind/db.example.com";
+    file "/var/lib/bind/db.example.com";
 };
 
 zone "50.168.192.in-addr.arpa" {
     type master;
-    file "/etc/bind/db.192";
+    file "/var/lib/bind/db.192";
 };
