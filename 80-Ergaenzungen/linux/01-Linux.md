@@ -15,15 +15,13 @@ Wir Verwenden die [Ubuntu](https://de.wikipedia.org/wiki/Ubuntu) Linux Distribut
 
 ### Installation
 
-Für das weitere Prototyping eigent sich am Besten der Ubuntu Server.
+Für das weitere Prototypen eignet sich am besten der Ubuntu Server.
 
-Ein CD Image finden Sie auf dem [TBZ Repository Server]({{config.server}}).
-
-Installieren Sie einen Ubuntu Server in VirtualBox.
+Dazu Installieren Sie einen Ubuntu Server in VirtualBox.
 
 ### Testen
 
-* [Ubuntu Server](https://www.ubuntu.com/download/desktop) Image herunterladen - **wenn ein interner Server vorhanden ist**: [{{config.server}}/cd-mirror]({{config.server}}/cd-mirror) verwenden.
+* [Ubuntu Server](https://www.ubuntu.com/download/desktop) Image herunterladen.
   
 * Erstellen einer VirtualBox VM mit Linux und dem heruntergeladenen Image als CD Laufwerk.
 

@@ -9,6 +9,7 @@ Das Kapitel enthält Ergänzende Unterlagen zu den vorherigen Kapiteln.
 * [Linux](linux/01-Linux.md)
 * [Bash](linux/10-Bash.md)
 * [Advanced Packaging Tool (APT)](linux/20-APTTool.md)
+* [Public-Private-Key-Verschlüsselung](https://www.inside-it.ch/de/post/was-ist-eigentlich-20201102) und [ssh](https://wiki.ubuntuusers.de/SSH/)
 * [cURL](linux/30-cURL.md)
 
 **Versionsverwaltung**
