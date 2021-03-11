@@ -98,12 +98,12 @@ Ein Prozess ist ein Computerprogramm zur Laufzeit. Genauer ist ein Prozess die k
 ! Notebook - Schulnetz 10.x.x.x und Privates Netz 192.168.2.8   !                 
 ! Port: 8080 (192.158.1.2:80)                                   !	
 !                                                               !	
-!    +--------------------+                                     !
-!    ! Web Server         !                                     !
-!    ! Host: web01        !                                     !
-!    ! IP: 192.168.1.2    !                                     ! 
-!    ! Port: 80           !                                     !  
-!    +--------------------+                                     !
+!                    +--------------------+                     !
+!                    ! Web Server         !                     !
+!                    ! Host: web01        !                     !
+!                    ! IP: 192.168.1.2    !                     ! 
+!                    ! Port: 80           !                     !  
+!                    +--------------------+                     !
 !                                                               !	
 +---------------------------------------------------------------+
 
