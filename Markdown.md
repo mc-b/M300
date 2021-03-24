@@ -38,6 +38,17 @@ Andere Themen die nacher noch dazu kommen sind noch Docker und Kybernetes. Die b
 Vagrant init = bereitet Verzeichniss vor sucht nach konfigurations file
 Vagrant up = Konfiguriert eine VM mit dem gegebenen konfigurations file
 
+### Theorie
+
+#### Umgebungsvariabeln
+Als Umgebungsvariable bezeichnet man konfigurierbare Variablen in Betriebssystemen, die oft Pfade zu bestimmten Programmen oder Daten enthalten, sowie bestimmte Daten und Einstellungen, die von mehreren Programmen verwendet werden können. In der Regel handelt es sich um Zeichenketten.
+
+#### Thread
+In der Informatik bezeichnet Thread – auch Aktivitätsträger oder leichtgewichtiger Prozess genannt – einen Ausführungsstrang oder eine Ausführungsreihenfolge in der Abarbeitung eines Programms. Ein Thread ist Teil eines Prozesses. 
+
+#### Prozess
+Ein Prozess ist ein Computerprogramm zur Laufzeit. Genauer ist ein Prozess die konkrete Instanziierung eines Programms zu dessen Ausführung innerhalb eines Rechnersystems, ergänzt um weitere Informationen und Ressourcenzuteilungen des Betriebssystems für diese Ausführung.
+
 ### Git Arbeitschritte
 
 #### 1.1 Account erstellen
@@ -83,15 +94,6 @@ Vagrant up = Konfiguriert eine VM mit dem gegebenen konfigurations file
 - Repositiory mit ssh oder HTTP klonen
 - Repository aktualisieren
 
-#### Umgebungsvariabeln
-Als Umgebungsvariable bezeichnet man konfigurierbare Variablen in Betriebssystemen, die oft Pfade zu bestimmten Programmen oder Daten enthalten, sowie bestimmte Daten und Einstellungen, die von mehreren Programmen verwendet werden können. In der Regel handelt es sich um Zeichenketten.
-
-#### Thread
-In der Informatik bezeichnet Thread – auch Aktivitätsträger oder leichtgewichtiger Prozess genannt – einen Ausführungsstrang oder eine Ausführungsreihenfolge in der Abarbeitung eines Programms. Ein Thread ist Teil eines Prozesses. 
-
-#### Prozess
-Ein Prozess ist ein Computerprogramm zur Laufzeit. Genauer ist ein Prozess die konkrete Instanziierung eines Programms zu dessen Ausführung innerhalb eines Rechnersystems, ergänzt um weitere Informationen und Ressourcenzuteilungen des Betriebssystems für diese Ausführung.
-
 #### eigene Vagrant VM aufsetzen
 
 +---------------------------------------------------------------+
@@ -101,8 +103,8 @@ Ein Prozess ist ein Computerprogramm zur Laufzeit. Genauer ist ein Prozess die k
 !                    +--------------------+                     !
 !                    ! Web Server         !                     !
 !                    ! Host: web01        !                     !
-!                    ! IP: 192.168.1.2    !                     ! 
-!                    ! Port: 80           !                     !  
+!                    ! IP: 10.0.2.15      !                     ! 
+!                    ! Port: 187          !                     !  
 !                    +--------------------+                     !
 !                                                               !	
 +---------------------------------------------------------------+
@@ -126,3 +128,9 @@ Um eine Vagrant VM mit einer Box zu erstellen muss man zuerst in einem Ordner se
 
 #### Testfall 4
 ![Testfall 4](D:\TBZ\Module\Modul_300\Testfälle\Fall4.PNG)
+
+### VM Webserver testen 
+
+Bild
+
+### Port forwarding
