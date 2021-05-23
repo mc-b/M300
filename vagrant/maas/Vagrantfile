@@ -1,0 +1,75 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+
+  # Every Vagrant development environment requires a box. 
+  config.vm.box = "ubuntu/focal64"
+
+  # Create a forwarded port mapping which allows access to a specific port
+  config.vm.network "forwarded_port", guest: 5240, host: 5240, auto_correct: false
+
+  # Create a private network, which allows host-only access to the machine
+  config.vm.network "private_network", ip: "192.168.137.100"
+
+  # Share an additional folder to the guest VM. 
+  config.vm.synced_folder "data", "/data"
+
+  # Provider-specific configuration so you can fine-tune various
+  config.vm.provider "virtualbox" do |vb|
+     vb.memory = "12288"
+     vb.cpus = 4
+     vb.name = "rackserver"
+     vb.customize ["modifyvm", :id, "--nested-hw-virt", "on"]
+  end
+  
+  # Enable provisioning with a shell script. 
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo add-apt-repository ppa:maas/3.0-next
+    sudo apt update
+    sudo apt install -y maas jq markdown nmap traceroute git curl wget zfsutils-linux cloud-image-utils virtinst qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils whois
+    sudo maas createadmin --username ubuntu --password password --email marcel.bernet@tbz.ch --ssh-import gh:mc-b
+    sudo snap refresh
+    cat <<%EOF% | sudo lxd init --preseed
+config:
+  core.https_address: '[::]:8443'
+  core.trust_password: password
+networks:
+- config:
+    ipv4.address: auto
+    ipv6.address: auto
+  description: ""
+  name: lxdbr0
+  type: ""
+  project: default
+storage_pools:
+- config:
+    size: 34GB
+  description: ""
+  name: default
+  driver: zfs
+profiles:
+- config: {}
+  description: ""
+  devices:
+    eth0:
+      name: eth0
+      network: lxdbr0
+      type: nic
+    root:
+      path: /
+      pool: default
+      type: disk
+  name: default
+projects: []
+cluster: null
+%EOF%
+    sudo lxc network set lxdbr0 dns.mode=none
+    sudo lxc network set lxdbr0 ipv4.dhcp=false
+    sudo lxc network set lxdbr0 ipv6.dhcp=false
+  SHELL
+end
