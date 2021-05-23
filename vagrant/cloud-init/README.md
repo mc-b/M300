@@ -75,7 +75,8 @@ Das Cloud-init Script ist wie folgt:
       - sudo usermod -a -G microk8s ubuntu
       - sudo microk8s enable dns 
       - sudo mkdir -p /home/ubuntu/.kube
-      - sudo microk8s config >/home/ubuntu/.kube/config
+      - sudo microk8s config -l >/home/ubuntu/.kube/config
+      - sudo microk8s config -l >/vagrant/config      
       - sudo chown -f -R ubuntu /home/ubuntu/.kube
       - sudo snap install kubectl --classic  
       - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/addons/dashboard-skip-login-no-ingress.yaml
@@ -87,7 +88,6 @@ Neu wird ein User `ubuntu` mit Password `password` angelegt. Mittels ssh und dem
 Zusätzlich steht das Kubernetes Dashboard via HTTPS und Port 8433 zur Verfügung. Ein Token ist nicht erforderlich, die Anmeldung kann übersprungen werden.
 
 * [https://localhost:8443](https://localhost:8443)  
-    
 
 **Links**
 
