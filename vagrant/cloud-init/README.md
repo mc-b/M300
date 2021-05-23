@@ -15,12 +15,13 @@ Das Vorgehen ist dabei wie folgt:
 * Erweitert das Vagrantfile um Portweiterleitung, fixe IP-Adresse, mindestens 2 GB RAM. Siehe Beispiel in diesem Verzeichnis.
 * Erweitert die `SHELL` Konfiguration wie folgt:
 
-
+<pre>
     config.vm.provision "shell", inline: <<-SHELL
        cp /vagrant/99-cloud-init.cfg /etc/cloud/cloud.cfg.d/
        cloud-init clean
        shutdown -r now
     SHELL
+</pre>
 
 Grundsätzlich unterstützen viele Linux Systeme Cloud-init. Die Unterstützung ist meistens so Implementiert, dass beim Aufstarten des Betriebssystem, geprüft wird ob Cloud-init bereits durchgelaufen ist. Wenn nicht wird es ausgeführt. Dabei werden die Dateien im Verzeichnis `/etc/cloud/cloud.cfg.d/` durchlaufen. Die obige Konfiguration macht sich diesen Umstand zu Nutze und erzwingt ein nochmaliges Durchlaufen von Cloud-init, neu mit unserere zusätzlichen Konfigurationsdatei `99-cloud-init.cfg`.
 
