@@ -27,6 +27,7 @@ Vagrant Beispiele. Pro Verzeichnis jeweils ein Vagrantfile welcher eine oder meh
 * [mmdb - Multi Machine, Erstellung von mehreren VM's mittels Vagrantfile](mmdb/)
 * [lam - Linux, Apache, MySQL, REST Umgebung](lam/)
 * [iot - Umfangreicheres Beispiel mit Desktop Umgebung](iot/)
+* [cloud-init - Vagrant mit Cloud-init]
 
 #### Beispiele zu Sicherheit
 
