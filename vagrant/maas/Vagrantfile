@@ -9,51 +9,32 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. 
   config.vm.box = "ubuntu/focal64"
-  
+
+  # Create a forwarded port mapping which allows access to a specific port
+  config.vm.network "forwarded_port", guest: 5240, host: 5240, auto_correct: false
+
+  # Create a private network, which allows host-only access to the machine
+  config.vm.network "private_network", ip: "192.168.137.8"
+
   # Share an additional folder to the guest VM. 
   config.vm.synced_folder "data", "/data"
 
-  config.vm.define "rack" do |rack|
-      # Create a forwarded port mapping which allows access to a specific port
-      rack.vm.network "forwarded_port", guest: 5240, host: 5240, auto_correct: false
-    
-      # Create a private network, which allows host-only access to the machine
-      rack.vm.network "private_network", ip: "192.168.137.100"
-    
-      # Provider-specific configuration so you can fine-tune various
-      rack.vm.provider "virtualbox" do |vb|
-         vb.memory = "6144"
-         vb.cpus = 2
-         vb.name = "rackserver"
-      end
-      
-      # Enable provisioning with a shell script. 
-      rack.vm.provision "shell", inline: <<-SHELL
-        sudo add-apt-repository ppa:maas/3.0-next
-        sudo apt update
-        sudo apt install -y maas jq markdown nmap traceroute git curl wget 
-        sudo maas createadmin --username ubuntu --password password --email marcel.bernet@tbz.ch --ssh-import gh:mc-b
-SHELL
+  # Provider-specific configuration so you can fine-tune various
+  config.vm.provider "virtualbox" do |vb|
+     vb.memory = "12288"
+     vb.cpus = 4
+     vb.name = "rackserver"
+     vb.customize ["modifyvm", :id, "--nested-hw-virt", "on"]
   end
   
-  config.vm.define "kvm01" do |kvm01|
-      # Create a private network, which allows host-only access to the machine
-      kvm01.vm.network "private_network", ip: "192.168.137.101"
-    
-      # Provider-specific configuration so you can fine-tune various
-      kvm01.vm.provider "virtualbox" do |vb|
-         vb.memory = "8192"
-         vb.cpus = 2
-         vb.name = "kvm01"
-         vb.customize ["modifyvm", :id, "--nested-hw-virt", "on"]         
-      end
-      
-      # Enable provisioning with a shell script. 
-      kvm01.vm.provision "shell", inline: <<-SHELL
-        sudo apt update
-        sudo apt install -y jq markdown nmap traceroute git curl wget zfsutils-linux cloud-image-utils virtinst qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils whois
-        sudo snap refresh
-        cat <<%EOF% | sudo lxd init --preseed
+  # Enable provisioning with a shell script. 
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo add-apt-repository ppa:maas/3.0-next
+    sudo apt update
+    sudo apt install -y maas jq markdown nmap traceroute git curl wget zfsutils-linux cloud-image-utils virtinst qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils whois
+    sudo maas createadmin --username ubuntu --password password --email marcel.bernet@tbz.ch --ssh-import gh:mc-b
+    sudo snap refresh
+    cat <<%EOF% | sudo lxd init --preseed
 config:
   core.https_address: '[::]:8443'
   core.trust_password: password
@@ -87,9 +68,8 @@ profiles:
 projects: []
 cluster: null
 %EOF%
-        sudo lxc network set lxdbr0 dns.mode=none
-        sudo lxc network set lxdbr0 ipv4.dhcp=false
-        sudo lxc network set lxdbr0 ipv6.dhcp=false
-SHELL
-  end  
+    sudo lxc network set lxdbr0 dns.mode=none
+    sudo lxc network set lxdbr0 ipv4.dhcp=false
+    sudo lxc network set lxdbr0 ipv6.dhcp=false
+  SHELL
 end
