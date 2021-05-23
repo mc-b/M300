@@ -21,10 +21,10 @@ Das Vorgehen ist dabei wie folgt:
        cloud-init clean
        shutdown -r now
     SHELL
-      
+
 Grundsätzlich unterstützen viele Linux Systeme Cloud-init. Die Unterstützung ist meistens so Implementiert, dass beim Aufstarten des Betriebssystem, geprüft wird ob Cloud-init bereits durchgelaufen ist. Wenn nicht wird es ausgeführt. Dabei werden die Dateien im Verzeichnis `/etc/cloud/cloud.cfg.d/` durchlaufen. Die obige Konfiguration macht sich diesen Umstand zu Nutze und erzwingt ein nochmaliges Durchlaufen von Cloud-init, neu mit unserere zusätzlichen Konfigurationsdatei `99-cloud-init.cfg`.
 
-Beispiel für `99-cloud-init.cfg` Scripts sind:
+Beispiele für `99-cloud-init.cfg` Scripts sind:
 
     #cloud-config - Installiert den nginx Web Server
     packages:
@@ -40,8 +40,17 @@ Beispiel für `99-cloud-init.cfg` Scripts sind:
      - git clone https://github.com/mc-b/M300 /home/vagrant/M300
      - cd /home/vagrant/M300/vagrant/cloud-init/
      - sudo bash -x /home/vagrant/lernmaas/helper/intro
+     
+Jeweiliges Beispiel kopieren und in Datei `99-cloud-init.cfg` einfügen, VM zerstören und neu bauen.
+     
+Der aktuelle Fortschritt kann mittels Ausgabe des Cloud-init Logs angeschaut werden:
 
-**Kubernetes**
+    vagrant ssh -c '(sudo tail -f /var/log/cloud-init-output.log)'
+
+
+***
+Kubernetes
+----------
 
 Mittels Cloud-init lässt sich auch eine Kubernetes Umgebung, basierend auf [microk8s](https://microk8s.io/), installieren.
 

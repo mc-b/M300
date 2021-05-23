@@ -748,5 +748,6 @@ muss die Plattform via Programmierschnittstelle ([API](https://de.wikipedia.org/
 * [mmdb - Multi Machine, Erstellung von mehreren VM's mittels Vagrantfile](../vagrant/mmdb/)
 * [lam - Linux, Apache, MySQL, REST Umgebung](../vagrant/lam/)
 * [iot - Umfangreicheres Beispiel mit Desktop Umgebung](../vagrant/iot/)
+* [cloud-init - Vagrant mit Cloud-init](../vagrant/cloud-init/)
 
 
