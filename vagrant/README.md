@@ -28,6 +28,7 @@ Vagrant Beispiele. Pro Verzeichnis jeweils ein Vagrantfile welcher eine oder meh
 * [lam - Linux, Apache, MySQL, REST Umgebung](lam/)
 * [iot - Umfangreicheres Beispiel mit Desktop Umgebung](iot/)
 * [cloud-init - Vagrant mit Cloud-init](cloud-init/)
+* [MAAS Umgebung in einer VM](maas/)
 
 #### Beispiele zu Sicherheit
 
