@@ -1,0 +1,49 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  # All Vagrant configuration is done here. The most common configuration
+  # options are documented and commented below. For a complete reference,
+  # please see the online documentation at vagrantup.com.
+
+  # Every Vagrant virtual environment requires a box to build off of.
+  config.vm.define "main" do |main|
+    main.vm.box = "ubuntu/xenial64"
+	main.vm.provider "virtualbox" do |vb|
+	  vb.memory = "4096" 
+	end
+    main.vm.hostname = "main"
+    main.vm.network "private_network", ip: "192.168.137.100"
+    main.vm.network "forwarded_port", guest:443, host:8443, auto_correct: false
+    main.vm.provision "shell", inline: <<-SHELL
+      set -o xtrace    
+      snap install microk8s --classic
+      usermod -a -G microk8s vagrant
+      microk8s enable dns 
+      mkdir -p /home/vagrant/.kube
+      microk8s config >/home/vagrant/.kube/config
+      chown -f -R vagrant:vagrant /home/vagrant/.kube
+      snap install kubectl --classic       
+      microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/addons/dashboard-skip-login-no-ingress.yaml      
+SHELL
+  end
+  
+  config.vm.define "worker" do |worker|
+    worker.vm.box = "ubuntu/xenial64"
+    worker.vm.hostname = "worker"
+    worker.vm.network "private_network", ip:"192.168.137.101" 
+	worker.vm.provider "virtualbox" do |vb|
+	  vb.memory = "4096"  
+	end     
+	worker.vm.provision "shell", inline: <<-SHELL
+      set -o xtrace    
+      snap install microk8s --classic
+      echo $(ssh -i /vagrant/.vagrant/machines/main/virtualbox/private_key -o StrictHostKeyChecking=no vagrant@192.168.137.100 "sudo microk8s add-node | grep 192.168.137.100") >/tmp/join
+      bash -x /tmp/join
+SHELL
+	end  
+ end
