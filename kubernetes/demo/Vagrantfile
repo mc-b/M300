@@ -12,7 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.define "main" do |main|
-    main.vm.box = "ubuntu/xenial64"
+    main.vm.box = "ubuntu/focal64"
 	main.vm.provider "virtualbox" do |vb|
 	  vb.memory = "8192" 
 	end
@@ -21,6 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     main.vm.network "forwarded_port", guest:443, host:8443, auto_correct: false
     main.vm.provision "shell", inline: <<-SHELL
       set -o xtrace    
+      sudo apt-get update
       snap install microk8s --classic
       usermod -a -G microk8s vagrant
       microk8s enable dns 
@@ -63,6 +64,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       microk8s helm3 repo add fluent https://fluent.github.io/helm-charts
       microk8s helm3 repo update
       microk8s helm3 install fluent-bit fluent/fluent-bit --namespace=logging
+      # Infos
+      set +x
+      export SERVER=$(hostname -I | cut -f 2 '-d ')
+      echo "------------------------------------------------------------------------------------------"
+      echo "Service Mesh"
+      echo "Bookinfo App: http://${SERVER}":$(su - vagrant -c "kubectl get service/istio-ingressgateway -n istio-system -o=jsonpath='{ .spec.ports[1].nodePort }'")"/productpage"
+      echo "Jaeger UI   : http://${SERVER}":$(su - vagrant -c "kubectl get service/tracing -n istio-system -o=jsonpath='{ .spec.ports[0].nodePort }'")
+      echo "Kiali  UI   : http://${SERVER}":$(su - vagrant -c "kubectl get service/kiali -n istio-system -o=jsonpath='{ .spec.ports[0].nodePort }'")
+      echo "------------------------------------------------------------------------------------------"
+      echo "Monitoring"
+      echo "Grafana UI (User/PW: admin/prom-operator): http://${SERVER}":$(su - vagrant -c "kubectl -n monitoring get service -l app.kubernetes.io/name=grafana -o=jsonpath='{ .items[0].spec.ports[0].nodePort }'")
+      echo "Prometheus UI                            : http://${SERVER}":$(su - vagrant -c "kubectl -n monitoring get service -l app=kube-prometheus-stack-prometheus -o=jsonpath='{ .items[0].spec.ports[0].nodePort }'")
+      echo "Alertmanager UI                          : http://${SERVER}":$(su - vagrant -c "kubectl -n monitoring get service -l app=kube-prometheus-stack-alertmanager -o=jsonpath='{ .items[0].spec.ports[0].nodePort }'")
 SHELL
   end
 
