@@ -10,6 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
+  config.vm.synced_folder "data", "/data"
+  
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.define "main" do |main|
     main.vm.box = "ubuntu/focal64"
@@ -23,6 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       set -o xtrace    
       sudo apt-get update
       snap install microk8s --classic
+      microk8s kubectl apply -f /vagrant/data/DataVolume.yaml
       usermod -a -G microk8s vagrant
       microk8s enable dns 
       # calico nicht von hub.docker.com holen
@@ -32,7 +35,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       mkdir -p /home/vagrant/.kube
       microk8s config >/home/vagrant/.kube/config
       chown -f -R vagrant:vagrant /home/vagrant/.kube
-      snap install kubectl --classic       
+      curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+      chmod +x ./kubectl
+      sudo mv ./kubectl /usr/local/bin/kubectl
+      # snap install kubectl --classic       
       microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/addons/dashboard-skip-login-no-ingress.yaml
       # Helm 
       microk8s enable helm3
@@ -64,6 +70,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       microk8s helm3 repo add fluent https://fluent.github.io/helm-charts
       microk8s helm3 repo update
       microk8s helm3 install fluent-bit fluent/fluent-bit --namespace=logging
+      # zum Container Images builden
+      sudo apt-get install -y docker.io
+      sudo usermod -aG docker vagrant 
       # Infos
       set +x
       export SERVER=$(hostname -I | cut -f 2 '-d ')

@@ -1,0 +1,115 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: local-storage
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+provisioner: kubernetes.io/no-provisioner
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: rwm-volume
+  labels:
+    type: local
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/data"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: data-claim
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi 
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: rwo-volume-01
+  labels:
+    type: local
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/01"  
+  persistentVolumeReclaimPolicy: Recycle  
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: rwo-volume-02
+  labels:
+    type: local
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/02" 
+  persistentVolumeReclaimPolicy: Recycle  
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: rwo-volume-03
+  labels:
+    type: local
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/03" 
+  persistentVolumeReclaimPolicy: Recycle  
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: rwo-volume-04
+  labels:
+    type: local
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/04"
+  persistentVolumeReclaimPolicy: Recycle  
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: rwo-volume-05
+  labels:
+    type: local
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/05"                         
+  persistentVolumeReclaimPolicy: Recycle  
+
