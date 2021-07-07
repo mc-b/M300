@@ -11,7 +11,7 @@ Mit einem kleinen Trick, können aber viele Vagrant Boxen, mit Cloud-init verwen
 
 Das Vorgehen ist dabei wie folgt:
 * Erstellt eine Cloud-init Datei z.B. `99-cloud-init.cfg`
-* Erstellt ein Vagrantfile `vagrant ubuntu/focal64` 
+* Erstellt ein Vagrantfile `vagrant init ubuntu/focal64` 
 * Erweitert das Vagrantfile um Portweiterleitung, fixe IP-Adresse, mindestens 2 GB RAM. Siehe Beispiel in diesem Verzeichnis.
 * Erweitert die `SHELL` Konfiguration wie folgt:
 
