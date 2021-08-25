@@ -235,41 +235,41 @@ Die Angabe des Providers im Vagrantfile definiert, welche Dynamic Infrastructure
 **Box hinzufügen** <br>
 Hinzufügen einer Box zur lokalen Registry:
 ```Shell
-      $ vagrant box add [box-name]
+      vagrant box add [box-name]
 ```
 In der lokalen Registry vorhandene Boxen anzeigen:
 ```Shell
-      $ vagrant box list
+      vagrant box list
 ```
 
 **VM erstellen** <br>
 Vagrantfile Erzeugen und Provisionierung starten:
 ```Shell
-      $ mkdir myserver
-      $ cd myserver
-      $ vagrant init ubuntu/xenial64
-      $ vagrant up
+      mkdir myserver
+      cd myserver
+      vagrant init ubuntu/xenial64
+      vagrant up
 ```
 Aktueller Status der VM anzeigen:
 ```Shell
-      $ vagrant status
+      vagrant status
 ```
 
 **VM updaten** <br>
 Nach Änderungen im Vagrantfile kann ein Server wie folgt aktualisiert werden:
 ```Shell
-      $ vagrant provision
+      vagrant provision
 ```
 oder
 ```Shell
-      $ vagrant destroy -f
-      $ vagrant up
+      vagrant destroy -f
+      vagrant up
 ```
 
 **VM löschen** <br>
 Die VM kann wie folgt gelöscht werden:
 ```Shell
-      $ vagrant destroy -f
+      7vagrant destroy -f
 ```
 
 
