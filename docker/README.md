@@ -22,6 +22,8 @@ In der VM können folgende Beispiele ausprobiert werden:
 
 * [apache - Apache Web Server](apache/)
 * [db - MySQL Datenbank](mysql/)
+* [app - eine einfache NodeJS App](app/)
+* [obige App erstellen](https://gitlab.com/ser-cal/Container-CAL-webapp_v1)
 * [apache4X - Scriptscript welches 4 Web Server Container erstellt](apache4X/)
 * [compose - Docker Compose](compose/)
 * [dotnet - .NET Entwicklungsumgebung](dotnet/)
