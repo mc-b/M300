@@ -110,7 +110,7 @@ Jetzt sind wir im Container, dort fehlen aber einige Befehle, welche wir zuerst 
     apt update
     apt install -y iproute2
     
-Jetzt können wir uns die Netzwerk-Adapter anschauen. Die VM hat einen IP-Adresse von 10.0.2.15.
+Jetzt können wir uns die Netzwerk-Adapter anschauen. Die VM hat eine IP-Adresse 10.0.2.15.
     
     ip addr
     
