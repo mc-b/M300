@@ -22,9 +22,13 @@ Zum einstimmen in das Thema.
 
 Anschliessend, diese einfache VM mit Docker installiert, erstellen.
 
+    cd docker
+    vagrant up
+    vagrant ssh
+
 In der VM können folgende Beispiele ausprobiert werden:
 
-* [obige App erstellen](https://gitlab.com/ser-cal/Container-CAL-webapp_v1)
+* [Einfache NodeJS App erstellen](https://gitlab.com/ser-cal/Container-CAL-webapp_v1), statt `ssh` - `vagrant ssh` verwenden.
 * [apache - Apache Web Server](apache/)
 * [db - MySQL Datenbank](mysql/)
 * [apache4X - Scriptscript welches 4 Web Server Container erstellt](apache4X/)
