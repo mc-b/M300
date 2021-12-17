@@ -32,6 +32,7 @@ Testen ob Apache Webserver läuft
 
 **Links**
 
+*   [Debian-Paketverwaltung verwenden](https://learning.lpi.org/de/learning-materials/101-500/102/102.4/)
 *   [Paketmanagement](http://debiananwenderhandbuch.de/paketmanagement.html)
 *   [Systemsicherheit](http://debiananwenderhandbuch.de/sicherheit.html)
 *   [25 Useful Basic Commands of APT-GET and APT-CACHE for Package Management](http://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/)
